@@ -1,0 +1,636 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-09-30",
+  "questions": [
+    {
+      "id": "brush-teeth-before-bed",
+      "slug": "brush-teeth-before-bed",
+      "question": "Should I brush my teeth before bed?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should brush your teeth before bed every night.",
+      "description": "Brushing your teeth before bed removes food particles and plaque that accumulate throughout the day. During sleep, saliva production decreases, which means bacteria can multiply more easily and produce acids that attack tooth enamel. Nighttime brushing is crucial for preventing cavities, gum disease, and bad breath.",
+      "reasoning": "When you sleep, your mouth produces less saliva, which normally helps wash away food particles and neutralize acids. This creates an ideal environment for bacteria to thrive. Brushing before bed removes the bacterial film (plaque) and food debris that would otherwise feed harmful bacteria for 6-8 hours while you sleep.",
+      "scientificBasis": "The American Dental Association recommends brushing twice daily for two minutes with fluoride toothpaste. Studies show that nighttime brushing significantly reduces the risk of dental caries and periodontal disease.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["dental", "hygiene", "sleep", "preventive-care"],
+      "backgroundImage": "/images/toothbrush-bg.jpg",
+      "iconImage": "/icons/tooth.svg",
+      "sources": [
+        {
+          "title": "Toothbrushing Recommendations",
+          "url": "https://www.ada.org/en/member-center/oral-health-topics/toothbrushes",
+          "type": "guideline",
+          "organization": "American Dental Association"
+        }
+      ],
+      "relatedQuestions": ["floss-daily", "use-mouthwash"],
+      "meta": {
+        "title": "Should I brush my teeth before bed? - ShouldI",
+        "description": "Science says yes! Learn why brushing your teeth before bed is essential for preventing cavities and maintaining oral health.",
+        "keywords": "brush teeth, bedtime routine, dental health, oral hygiene",
+        "ogImage": "/og-images/brush-teeth.jpg"
+      }
+    },
+    {
+      "id": "wash-hands-after-restroom",
+      "slug": "wash-hands-after-restroom",
+      "question": "Should I wash my hands after using the restroom?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should always wash your hands after using the restroom.",
+      "description": "Washing your hands after using the restroom is one of the most important hygiene practices for preventing the spread of germs and disease. Even if you don't directly touch contaminated surfaces, bacteria and viruses can be present in restroom environments and on surfaces like door handles, flush levers, and faucets.",
+      "reasoning": "Restrooms harbor numerous pathogens including E. coli, norovirus, salmonella, and other harmful bacteria and viruses. These microorganisms can cause gastrointestinal illnesses, respiratory infections, and other diseases. Proper handwashing with soap and water for at least 20 seconds removes these pathogens and prevents transmission to yourself and others.",
+      "scientificBasis": "The CDC identifies handwashing as one of the most effective ways to prevent the spread of infection. Studies show that proper handwashing can reduce diarrheal diseases by up to 40% and respiratory infections by up to 21%.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["hygiene", "disease-prevention", "public-health", "bacteria"],
+      "backgroundImage": "/images/handwashing-bg.jpg",
+      "iconImage": "/icons/hands.svg",
+      "sources": [
+        {
+          "title": "Handwashing: Clean Hands Save Lives",
+          "url": "https://www.cdc.gov/handwashing/",
+          "type": "guideline",
+          "organization": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "relatedQuestions": ["use-hand-sanitizer", "wash-hands-before-eating"],
+      "meta": {
+        "title": "Should I wash my hands after using the restroom? - ShouldI",
+        "description": "Absolutely yes! Discover the science behind why handwashing after restroom use is crucial for preventing disease.",
+        "keywords": "handwashing, hygiene, restroom, disease prevention, public health",
+        "ogImage": "/og-images/handwashing.jpg"
+      }
+    },
+    {
+      "id": "wear-sunscreen-daily",
+      "slug": "wear-sunscreen-daily",
+      "question": "Should I wear sunscreen every day?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should wear sunscreen every day, even when it's cloudy or you're indoors near windows.",
+      "description": "Daily sunscreen use protects your skin from harmful ultraviolet (UV) radiation that can cause premature aging, sunburn, and skin cancer. UV rays penetrate through clouds and windows, meaning you're exposed even on overcast days or while indoors. Dermatologists recommend using broad-spectrum sunscreen with at least SPF 30 on all exposed skin.",
+      "reasoning": "UV radiation damages DNA in skin cells, leading to mutations that can cause skin cancer. Up to 90% of visible skin aging is caused by sun exposure. UVA rays (which cause aging) penetrate glass and clouds, while UVB rays (which cause burning) are strongest during midday but present year-round. Regular sunscreen use reduces melanoma risk by 50% and squamous cell carcinoma risk by 40%.",
+      "scientificBasis": "The American Academy of Dermatology states that daily sunscreen use is one of the most effective ways to prevent skin cancer and premature aging. Multiple long-term studies have demonstrated that regular sunscreen application significantly reduces skin cancer incidence.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["skin-care", "cancer-prevention", "sun-protection", "preventive-care"],
+      "backgroundImage": "/images/sunscreen-bg.jpg",
+      "iconImage": "/icons/sun.svg",
+      "sources": [
+        {
+          "title": "Sunscreen FAQs",
+          "url": "https://www.aad.org/public/everyday-care/sun-protection/sunscreen-patients/sunscreen-faqs",
+          "type": "guideline",
+          "organization": "American Academy of Dermatology"
+        }
+      ],
+      "relatedQuestions": ["reapply-sunscreen", "wear-sunscreen-indoors"],
+      "meta": {
+        "title": "Should I wear sunscreen every day? - ShouldI",
+        "description": "Yes! Learn why dermatologists recommend daily sunscreen use for preventing skin cancer and premature aging.",
+        "keywords": "sunscreen, skin cancer prevention, UV protection, daily skincare",
+        "ogImage": "/og-images/sunscreen.jpg"
+      }
+    },
+    {
+      "id": "drink-eight-glasses-water",
+      "slug": "drink-eight-glasses-water",
+      "question": "Should I drink eight glasses of water per day?",
+      "shortAnswer": "No",
+      "answer": "No, the 'eight glasses a day' rule is not scientifically supported. Your water needs depend on your size, activity level, climate, and overall health.",
+      "description": "While staying hydrated is important, the specific recommendation of eight 8-ounce glasses (about 2 liters) daily lacks scientific basis and doesn't account for individual variation. Most healthy people can rely on their thirst mechanism to determine when to drink. Water needs vary based on body size, physical activity, temperature, humidity, and health conditions. You also get water from food and other beverages.",
+      "reasoning": "The origin of the eight-glasses myth is unclear, but it may have come from a 1945 recommendation that was misinterpreted. That guidance suggested about 2.5 liters of water daily but included water from all sources, including food. Modern research shows that fluid needs vary dramatically between individuals. Athletes need more, as do people in hot climates. About 20% of daily fluid intake typically comes from food.",
+      "scientificBasis": "The National Academy of Medicine suggests adequate fluid intake is about 3.7 liters for men and 2.7 liters for women from all beverages and foods. However, they note that most healthy people can adequately meet their hydration needs by drinking when thirsty. No scientific evidence supports the specific eight-glasses recommendation.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["hydration", "nutrition", "myth-busting", "wellness"],
+      "backgroundImage": "/images/water-bg.jpg",
+      "iconImage": "/icons/water.svg",
+      "sources": [
+        {
+          "title": "Dietary Reference Intakes for Water",
+          "url": "https://www.nationalacademies.org/our-work/dietary-reference-intakes-for-water-potassium-sodium-chloride-and-sulfate",
+          "type": "guideline",
+          "organization": "National Academy of Medicine"
+        }
+      ],
+      "relatedQuestions": ["drink-water-when-thirsty", "hydration-signs"],
+      "meta": {
+        "title": "Should I drink eight glasses of water per day? - ShouldI",
+        "description": "Actually, no! Learn the science behind hydration and why the eight-glasses rule is a myth.",
+        "keywords": "hydration, water intake, eight glasses myth, fluid needs",
+        "ogImage": "/og-images/water.jpg"
+      }
+    },
+    {
+      "id": "floss-daily",
+      "slug": "floss-daily",
+      "question": "Should I floss my teeth every day?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should floss at least once daily to remove plaque and food particles between teeth where your toothbrush can't reach.",
+      "description": "Flossing removes plaque and food debris from between teeth and under the gumline, areas that toothbrushes cannot effectively clean. This prevents cavities between teeth, reduces gum disease risk, and helps prevent bad breath. Flossing is especially important before bed to remove accumulated debris from the day.",
+      "reasoning": "About 40% of tooth surfaces are between teeth where toothbrush bristles cannot reach. Plaque that remains in these areas hardens into tartar, which can only be removed by a dental professional. This buildup leads to gingivitis (gum inflammation) and can progress to periodontitis (severe gum disease) that damages bone and can result in tooth loss. Flossing disrupts bacterial colonies before they can cause damage.",
+      "scientificBasis": "The American Dental Association recommends daily flossing as part of oral hygiene. While some studies show modest benefits, the consensus among dental professionals is that mechanical removal of interproximal plaque is important for preventing periodontal disease. The limited research quality doesn't mean flossing is ineffective, but rather that conducting rigorous long-term studies on flossing is challenging.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["dental", "hygiene", "preventive-care", "gum-health"],
+      "backgroundImage": "/images/floss-bg.jpg",
+      "iconImage": "/icons/floss.svg",
+      "sources": [
+        {
+          "title": "Flossing and Interdental Cleaners",
+          "url": "https://www.ada.org/en/member-center/oral-health-topics/floss",
+          "type": "guideline",
+          "organization": "American Dental Association"
+        }
+      ],
+      "relatedQuestions": ["brush-teeth-before-bed", "use-mouthwash"],
+      "meta": {
+        "title": "Should I floss my teeth every day? - ShouldI",
+        "description": "Yes! Learn why daily flossing is essential for preventing gum disease and maintaining oral health.",
+        "keywords": "flossing, dental health, gum disease prevention, oral hygiene",
+        "ogImage": "/og-images/floss.jpg"
+      }
+    },
+    {
+      "id": "take-multivitamin-daily",
+      "slug": "take-multivitamin-daily",
+      "question": "Should I take a multivitamin every day?",
+      "shortAnswer": "No",
+      "answer": "No, most healthy adults eating a balanced diet do not need a daily multivitamin. Getting nutrients from whole foods is preferable.",
+      "description": "For most healthy adults consuming a varied diet, multivitamins provide little to no health benefit. Research shows they don't reduce risk of heart disease, cancer, or cognitive decline in well-nourished populations. Some people may benefit from specific supplements (like vitamin D in winter, B12 for vegans, or folate for pregnant women), but blanket multivitamin use isn't supported by evidence.",
+      "reasoning": "Large-scale studies have consistently failed to show that multivitamins prevent chronic diseases or extend life in people without nutritional deficiencies. Nutrients from whole foods are better absorbed and come with beneficial fiber, antioxidants, and other compounds. Excessive supplementation can even be harmful—high doses of certain vitamins and minerals can cause toxicity or interfere with medications. Money spent on multivitamins is better invested in quality whole foods.",
+      "scientificBasis": "The U.S. Preventive Services Task Force concludes there is insufficient evidence to recommend for or against multivitamin use for chronic disease prevention. Major studies including the Physicians' Health Study II found no cardiovascular or cancer prevention benefits from multivitamins in well-nourished populations.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["nutrition", "supplements", "preventive-care", "diet"],
+      "backgroundImage": "/images/vitamins-bg.jpg",
+      "iconImage": "/icons/pill.svg",
+      "sources": [
+        {
+          "title": "Vitamin Supplementation to Prevent Cancer and CVD",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-supplementation-to-prevent-cancer-and-cvd-counseling",
+          "type": "guideline",
+          "organization": "U.S. Preventive Services Task Force"
+        }
+      ],
+      "relatedQuestions": ["take-vitamin-d", "eat-balanced-diet"],
+      "meta": {
+        "title": "Should I take a multivitamin every day? - ShouldI",
+        "description": "Probably not! Learn what science says about multivitamin supplements and who actually needs them.",
+        "keywords": "multivitamin, supplements, nutrition, dietary health",
+        "ogImage": "/og-images/vitamins.jpg"
+      }
+    },
+    {
+      "id": "get-flu-shot-annually",
+      "slug": "get-flu-shot-annually",
+      "question": "Should I get a flu shot every year?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, most people should get an annual flu vaccination to protect themselves and others from influenza.",
+      "description": "Annual flu vaccination is recommended for everyone six months and older, with rare exceptions. The flu vaccine protects against the most common circulating strains each season and significantly reduces your risk of severe illness, hospitalization, and death from influenza. It also helps protect vulnerable people around you who may be at higher risk of complications.",
+      "reasoning": "Influenza viruses mutate rapidly, which is why new vaccines are developed each year to match circulating strains. The flu causes significant morbidity and mortality, with tens of thousands of deaths annually in the U.S. alone. Vaccination reduces illness severity even if you contract the flu, lowering hospitalization risk by 40-60% when the vaccine is well-matched to circulating strains. Widespread vaccination also provides community protection for those who cannot be vaccinated.",
+      "scientificBasis": "The CDC's Advisory Committee on Immunization Practices recommends annual flu vaccination for all persons aged six months and older. Clinical trials and observational studies consistently demonstrate vaccine effectiveness in reducing flu illness, medical visits, hospitalizations, and deaths.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["vaccination", "disease-prevention", "public-health", "immune-system"],
+      "backgroundImage": "/images/flu-shot-bg.jpg",
+      "iconImage": "/icons/syringe.svg",
+      "sources": [
+        {
+          "title": "Influenza (Flu) Vaccination",
+          "url": "https://www.cdc.gov/flu/prevent/keyfacts.htm",
+          "type": "guideline",
+          "organization": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "relatedQuestions": ["get-covid-vaccine", "vaccinate-children"],
+      "meta": {
+        "title": "Should I get a flu shot every year? - ShouldI",
+        "description": "Yes! Learn why annual flu vaccination is recommended for nearly everyone and how it protects you and your community.",
+        "keywords": "flu shot, influenza vaccine, vaccination, disease prevention",
+        "ogImage": "/og-images/flu-shot.jpg"
+      }
+    },
+    {
+      "id": "wear-seatbelt",
+      "slug": "wear-seatbelt",
+      "question": "Should I wear a seatbelt every time I'm in a car?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should always wear a seatbelt in a vehicle, regardless of where you're sitting or how short the trip.",
+      "description": "Seatbelts are the single most effective safety device in vehicles, reducing the risk of death for front-seat passengers by 45% and the risk of serious injury by 50%. They work by distributing crash forces across stronger parts of your body and preventing ejection from the vehicle. Most fatal crashes occur close to home and at speeds under 40 mph, making seatbelt use critical for all trips.",
+      "reasoning": "During a collision, unrestrained occupants continue moving at the vehicle's pre-crash speed until they hit the interior, other passengers, or are ejected. Even at 30 mph, the force of impact without a seatbelt is equivalent to falling from a three-story building. Seatbelts prevent this by keeping you secured and working with airbags (which can injure or kill unbelted occupants) to protect you. Over half of crash fatalities involve people not wearing seatbelts.",
+      "scientificBasis": "Decades of research and crash data analysis demonstrate seatbelt effectiveness. The National Highway Traffic Safety Administration reports that seatbelts saved nearly 15,000 lives in a single year. Comprehensive studies across multiple countries consistently show dramatic reductions in injury and death rates when seatbelts are used.",
+      "confidence": "high",
+      "category": "safety",
+      "tags": ["vehicle-safety", "injury-prevention", "traffic-safety", "laws"],
+      "backgroundImage": "/images/seatbelt-bg.jpg",
+      "iconImage": "/icons/seatbelt.svg",
+      "sources": [
+        {
+          "title": "Seat Belts: Get the Facts",
+          "url": "https://www.nhtsa.gov/risky-driving/seat-belts",
+          "type": "guideline",
+          "organization": "National Highway Traffic Safety Administration"
+        }
+      ],
+      "relatedQuestions": ["use-child-car-seat", "drive-distracted"],
+      "meta": {
+        "title": "Should I wear a seatbelt every time I'm in a car? - ShouldI",
+        "description": "Absolutely yes! Learn why seatbelts are the most effective way to prevent death and injury in vehicle crashes.",
+        "keywords": "seatbelt, car safety, vehicle safety, crash prevention",
+        "ogImage": "/og-images/seatbelt.jpg"
+      }
+    },
+    {
+      "id": "exercise-regularly",
+      "slug": "exercise-regularly",
+      "question": "Should I exercise regularly?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should engage in regular physical activity for both physical and mental health benefits.",
+      "description": "Regular exercise provides profound health benefits including reduced risk of heart disease, stroke, type 2 diabetes, several cancers, depression, and anxiety. It strengthens bones and muscles, improves cognitive function, enhances sleep quality, and increases longevity. Adults should aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous activity per week, plus muscle-strengthening activities twice weekly.",
+      "reasoning": "Physical inactivity is one of the leading risk factors for death worldwide. Exercise improves cardiovascular health by strengthening the heart, lowering blood pressure, and improving cholesterol profiles. It helps regulate blood sugar, maintain healthy body weight, and preserve muscle mass and bone density with aging. Exercise also releases endorphins and other neurochemicals that improve mood and reduce stress. The benefits are dose-dependent—more activity generally provides greater benefits, though even small amounts help.",
+      "scientificBasis": "Thousands of studies demonstrate exercise benefits across multiple health outcomes. The Physical Activity Guidelines for Americans, based on comprehensive research review, recommend specific amounts and types of exercise for different populations. Meta-analyses consistently show strong associations between physical activity and reduced risk of chronic diseases and mortality.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["fitness", "cardiovascular-health", "mental-health", "preventive-care"],
+      "backgroundImage": "/images/exercise-bg.jpg",
+      "iconImage": "/icons/running.svg",
+      "sources": [
+        {
+          "title": "Physical Activity Guidelines for Americans",
+          "url": "https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines",
+          "type": "guideline",
+          "organization": "U.S. Department of Health and Human Services"
+        }
+      ],
+      "relatedQuestions": ["strength-train", "cardio-or-weights"],
+      "meta": {
+        "title": "Should I exercise regularly? - ShouldI",
+        "description": "Yes! Discover the extensive health benefits of regular physical activity and how much exercise you need.",
+        "keywords": "exercise, physical activity, fitness, health benefits",
+        "ogImage": "/og-images/exercise.jpg"
+      }
+    },
+    {
+      "id": "sleep-eight-hours",
+      "slug": "sleep-eight-hours",
+      "question": "Should I sleep eight hours every night?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, most adults need 7-9 hours of sleep per night, with eight hours being ideal for many people.",
+      "description": "Adequate sleep is essential for physical health, cognitive function, emotional regulation, and overall wellbeing. While individual needs vary slightly, most adults function best with 7-9 hours of sleep. Chronic sleep deprivation increases risk of obesity, diabetes, cardiovascular disease, weakened immunity, depression, and cognitive decline. Quality sleep improves memory consolidation, problem-solving, creativity, and mood.",
+      "reasoning": "During sleep, your body performs critical maintenance including tissue repair, muscle growth, protein synthesis, and hormone regulation. The brain consolidates memories and clears metabolic waste. Insufficient sleep disrupts these processes and impairs judgment, reaction time, and emotional regulation. Sleep deprivation affects the hormones that regulate hunger, leading to increased appetite and weight gain. It also weakens immune function, making you more susceptible to infections.",
+      "scientificBasis": "The National Sleep Foundation and American Academy of Sleep Medicine recommend 7-9 hours for adults based on extensive research. Studies show that both too little sleep (under 7 hours) and excessive sleep (over 9 hours) are associated with increased health risks, though the relationship with long sleep is less clear and may reflect underlying health conditions.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["sleep", "wellness", "cognitive-health", "preventive-care"],
+      "backgroundImage": "/images/sleep-bg.jpg",
+      "iconImage": "/icons/moon.svg",
+      "sources": [
+        {
+          "title": "How Much Sleep Do We Really Need?",
+          "url": "https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need",
+          "type": "guideline",
+          "organization": "National Sleep Foundation"
+        }
+      ],
+      "relatedQuestions": ["maintain-sleep-schedule", "use-screens-before-bed"],
+      "meta": {
+        "title": "Should I sleep eight hours every night? - ShouldI",
+        "description": "Yes! Learn why adequate sleep is crucial for health and how much sleep you really need.",
+        "keywords": "sleep, sleep duration, health, rest, eight hours",
+        "ogImage": "/og-images/sleep.jpg"
+      }
+    },
+    {
+      "id": "smoke-cigarettes",
+      "slug": "smoke-cigarettes",
+      "question": "Should I smoke cigarettes?",
+      "shortAnswer": "No",
+      "answer": "No, you should never smoke cigarettes. Smoking is the leading cause of preventable death and has no safe level of consumption.",
+      "description": "Cigarette smoking causes cancer, heart disease, stroke, lung diseases, diabetes, and chronic obstructive pulmonary disease (COPD). It harms nearly every organ in the body and increases risk of death from all causes. Smoking causes more than 480,000 deaths annually in the United States alone. Quitting smoking at any age provides immediate and long-term health benefits, and numerous effective resources exist to help people quit.",
+      "reasoning": "Tobacco smoke contains over 7,000 chemicals, hundreds of which are toxic and at least 70 are known carcinogens. These substances damage DNA, impair immune function, cause inflammation, narrow blood vessels, and create conditions for disease development. Nicotine is highly addictive, making quitting difficult but not impossible. Even light or social smoking carries significant health risks. Secondhand smoke exposure also causes disease and death in nonsmokers, particularly children.",
+      "scientificBasis": "Decades of research unequivocally demonstrate that smoking is catastrophically harmful to health. The U.S. Surgeon General's reports, based on thousands of studies, establish smoking as a direct cause of numerous diseases. No tobacco product is safe, and there is no risk-free level of exposure to tobacco smoke.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["smoking", "cancer-prevention", "lung-health", "addiction"],
+      "backgroundImage": "/images/no-smoking-bg.jpg",
+      "iconImage": "/icons/no-smoking.svg",
+      "sources": [
+        {
+          "title": "Health Effects of Cigarette Smoking",
+          "url": "https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/effects_cig_smoking/",
+          "type": "guideline",
+          "organization": "Centers for Disease Control and Prevention"
+        }
+      ],
+      "relatedQuestions": ["quit-smoking", "use-vaping"],
+      "meta": {
+        "title": "Should I smoke cigarettes? - ShouldI",
+        "description": "Absolutely not! Learn about the devastating health effects of smoking and why you should never start or should quit now.",
+        "keywords": "smoking, cigarettes, health risks, tobacco, quit smoking",
+        "ogImage": "/og-images/no-smoking.jpg"
+      }
+    },
+    {
+      "id": "get-annual-checkup",
+      "slug": "get-annual-checkup",
+      "question": "Should I get an annual physical checkup?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should see your primary care provider regularly for preventive care, though the ideal frequency depends on your age and health status.",
+      "description": "Regular checkups allow for early detection of health problems, monitoring of chronic conditions, updating vaccinations, and discussing preventive measures. While healthy younger adults may not need annual visits, most people benefit from periodic health assessments. Your doctor can perform screenings, review medications, assess risk factors, and provide personalized health guidance. The specific tests and frequency depend on age, sex, family history, and existing conditions.",
+      "reasoning": "Many serious conditions like high blood pressure, diabetes, and high cholesterol have no symptoms in early stages but can be detected through routine screening. Early detection generally leads to better treatment outcomes and can prevent complications. Regular visits also establish a relationship with your provider, making it easier to address concerns when they arise. Preventive care including vaccinations, cancer screenings, and lifestyle counseling can significantly reduce disease risk and improve quality of life.",
+      "scientificBasis": "While evidence for routine annual physicals in asymptomatic adults is mixed, major medical organizations support regular preventive care visits. The frequency depends on age and risk factors. The U.S. Preventive Services Task Force provides evidence-based recommendations for specific screenings and preventive services at different ages.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["preventive-care", "screening", "primary-care", "wellness"],
+      "backgroundImage": "/images/checkup-bg.jpg",
+      "iconImage": "/icons/stethoscope.svg",
+      "sources": [
+        {
+          "title": "USPSTF Recommendations",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics",
+          "type": "guideline",
+          "organization": "U.S. Preventive Services Task Force"
+        }
+      ],
+      "relatedQuestions": ["get-blood-work", "get-cancer-screenings"],
+      "meta": {
+        "title": "Should I get an annual physical checkup? - ShouldI",
+        "description": "Yes! Learn why regular preventive care visits are important for maintaining health and catching problems early.",
+        "keywords": "annual checkup, physical exam, preventive care, health screening",
+        "ogImage": "/og-images/checkup.jpg"
+      }
+    },
+    {
+      "id": "change-passwords-regularly",
+      "slug": "change-passwords-regularly",
+      "question": "Should I change my passwords regularly?",
+      "shortAnswer": "No",
+      "answer": "No, you don't need to change passwords regularly unless there's evidence of compromise. Focus on using strong, unique passwords instead.",
+      "description": "Contrary to old advice, mandatory periodic password changes often reduce security because people tend to make predictable modifications (like adding a number) or write passwords down. Modern security guidance emphasizes using strong, unique passwords for each account, enabling two-factor authentication, and changing passwords only when there's reason to believe they've been compromised. Password managers make it easy to maintain complex, unique passwords.",
+      "reasoning": "Frequent password changes encourage poor practices like simple patterns, password reuse, or writing passwords down. Research shows this actually decreases security. Strong, random passwords that are unique to each service are far more effective. When breaches occur, affected services notify users to change passwords. Using a password manager and two-factor authentication provides much better security than routine password rotation.",
+      "scientificBasis": "NIST (National Institute of Standards and Technology) updated its password guidelines to explicitly recommend against requiring periodic password changes absent indication of compromise. This guidance is based on research showing that forced changes lead to weaker passwords and user frustration without improving security.",
+      "confidence": "high",
+      "category": "technology",
+      "tags": ["cybersecurity", "passwords", "online-safety", "privacy"],
+      "backgroundImage": "/images/password-bg.jpg",
+      "iconImage": "/icons/lock.svg",
+      "sources": [
+        {
+          "title": "Digital Identity Guidelines",
+          "url": "https://pages.nist.gov/800-63-3/",
+          "type": "guideline",
+          "organization": "National Institute of Standards and Technology"
+        }
+      ],
+      "relatedQuestions": ["use-password-manager", "enable-two-factor-auth"],
+      "meta": {
+        "title": "Should I change my passwords regularly? - ShouldI",
+        "description": "Actually, no! Learn why modern security experts recommend against routine password changes and what to do instead.",
+        "keywords": "password security, cybersecurity, password changes, online safety",
+        "ogImage": "/og-images/password.jpg"
+      }
+    },
+    {
+      "id": "backup-computer-data",
+      "slug": "backup-computer-data",
+      "question": "Should I back up my computer data regularly?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should regularly back up important data to protect against hardware failure, theft, ransomware, and accidental deletion.",
+      "description": "Regular backups are essential for protecting irreplaceable files like photos, documents, and work files. Hard drives and computers fail, devices get stolen or damaged, and ransomware can encrypt your files. The 3-2-1 backup rule recommends keeping three copies of data on two different types of media with one copy stored off-site. Cloud backup services and external hard drives make this easier than ever.",
+      "reasoning": "All storage devices eventually fail—hard drives typically last 3-5 years. Without backups, hardware failure means permanent data loss. Ransomware attacks can encrypt all accessible files, making them unusable unless you pay (with no guarantee of recovery). Accidental deletion, software corruption, and theft are additional risks. Regular automated backups ensure you can restore data after any of these events with minimal loss.",
+      "scientificBasis": "Data loss is extremely common—studies suggest about 30% of people have never backed up their devices. The 3-2-1 backup strategy is recommended by cybersecurity professionals and disaster recovery experts as the minimum for protecting important data. Multiple backup locations protect against localized disasters like fires or floods.",
+      "confidence": "high",
+      "category": "technology",
+      "tags": ["data-backup", "cybersecurity", "data-protection", "disaster-recovery"],
+      "backgroundImage": "/images/backup-bg.jpg",
+      "iconImage": "/icons/cloud-backup.svg",
+      "sources": [
+        {
+          "title": "Data Backup Options",
+          "url": "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf",
+          "type": "guideline",
+          "organization": "Cybersecurity and Infrastructure Security Agency"
+        }
+      ],
+      "relatedQuestions": ["use-cloud-storage", "protect-from-ransomware"],
+      "meta": {
+        "title": "Should I back up my computer data regularly? - ShouldI",
+        "description": "Yes! Learn why data backups are crucial for protecting against loss and how to implement the 3-2-1 backup strategy.",
+        "keywords": "data backup, computer backup, data protection, cloud backup",
+        "ogImage": "/og-images/backup.jpg"
+      }
+    },
+    {
+      "id": "use-public-wifi-safely",
+      "slug": "use-public-wifi-safely",
+      "question": "Should I use public WiFi without precautions?",
+      "shortAnswer": "No",
+      "answer": "No, you should not use public WiFi without security precautions. Use a VPN or avoid accessing sensitive information on public networks.",
+      "description": "Public WiFi networks at coffee shops, airports, and hotels are convenient but inherently insecure. Without encryption, anyone on the network can potentially intercept your data. Attackers can set up fake networks, perform man-in-the-middle attacks, or use packet sniffers to capture passwords, emails, and financial information. Using a VPN encrypts your traffic, while avoiding sensitive transactions on public WiFi eliminates the risk entirely.",
+      "reasoning": "Public WiFi typically lacks encryption between your device and the router, meaning data travels in plain text that others can read. Malicious actors can position themselves between you and the connection point, intercepting everything you send and receive. They can also create fake hotspots with names similar to legitimate networks to trick people into connecting. Once connected to a compromised network, attackers can inject malware, steal credentials, and access any unencrypted data.",
+      "scientificBasis": "Cybersecurity experts consistently warn about public WiFi risks. Studies have demonstrated how easily attackers can intercept data on unsecured networks using readily available tools. The Cybersecurity and Infrastructure Security Agency and other security organizations recommend using VPNs or cellular data for sensitive activities.",
+      "confidence": "high",
+      "category": "technology",
+      "tags": ["cybersecurity", "wifi-safety", "privacy", "online-security"],
+      "backgroundImage": "/images/wifi-bg.jpg",
+      "iconImage": "/icons/wifi.svg",
+      "sources": [
+        {
+          "title": "Public WiFi Security Tips",
+          "url": "https://www.cisa.gov/tips/st05-003",
+          "type": "guideline",
+          "organization": "Cybersecurity and Infrastructure Security Agency"
+        }
+      ],
+      "relatedQuestions": ["use-vpn", "secure-home-network"],
+      "meta": {
+        "title": "Should I use public WiFi without precautions? - ShouldI",
+        "description": "No! Learn about the security risks of public WiFi and how to protect your data on unsecured networks.",
+        "keywords": "public wifi, wifi security, VPN, online privacy, cybersecurity",
+        "ogImage": "/og-images/wifi.jpg"
+      }
+    },
+    {
+      "id": "recycle-plastic",
+      "slug": "recycle-plastic",
+      "question": "Should I recycle plastic?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, you should recycle plastic when possible, but reducing plastic consumption is even more important.",
+      "description": "Recycling plastic conserves resources, reduces landfill waste, and decreases pollution compared to producing new plastic. However, not all plastic is recyclable, and much plastic waste isn't actually recycled even when placed in recycling bins. Check your local recycling guidelines for which plastics are accepted. The most effective approach is reducing plastic use, reusing items when possible, and recycling as a last resort (the 'reduce, reuse, recycle' hierarchy).",
+      "reasoning": "Plastic production uses fossil fuels and creates greenhouse gas emissions. Recycling plastic uses less energy than creating virgin plastic, though the process isn't perfect—plastic can typically only be recycled a few times before quality degrades. Contamination and sorting challenges mean actual recycling rates are low (only about 9% of all plastic ever produced has been recycled). However, recycling is still better than disposal. The most impactful actions are refusing single-use plastics and choosing products with less packaging.",
+      "scientificBasis": "Studies show that plastic recycling reduces environmental impact compared to landfilling or incineration, though it's not a complete solution. The EPA and environmental organizations emphasize the importance of source reduction (using less plastic) as the most effective strategy, with recycling as an important but secondary measure.",
+      "confidence": "high",
+      "category": "environment",
+      "tags": ["recycling", "waste-reduction", "sustainability", "plastic-pollution"],
+      "backgroundImage": "/images/recycle-bg.jpg",
+      "iconImage": "/icons/recycle.svg",
+      "sources": [
+        {
+          "title": "Plastics: Material-Specific Data",
+          "url": "https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/plastics-material-specific-data",
+          "type": "report",
+          "organization": "Environmental Protection Agency"
+        }
+      ],
+      "relatedQuestions": ["reduce-plastic-use", "compost-food-waste"],
+      "meta": {
+        "title": "Should I recycle plastic? - ShouldI",
+        "description": "Yes, but reducing plastic use is better! Learn about plastic recycling effectiveness and the waste hierarchy.",
+        "keywords": "plastic recycling, waste reduction, sustainability, environmental protection",
+        "ogImage": "/og-images/recycle.jpg"
+      }
+    },
+    {
+      "id": "eat-breakfast",
+      "slug": "eat-breakfast",
+      "question": "Should I eat breakfast every day?",
+      "shortAnswer": "No",
+      "answer": "No, eating breakfast isn't necessary for everyone. Listen to your body's hunger cues and eat when you're genuinely hungry.",
+      "description": "The idea that breakfast is the most important meal of the day isn't supported by strong scientific evidence. While some people feel and perform better eating breakfast, others naturally prefer to eat later in the day. What matters more is your overall diet quality and total daily nutrition, not the timing of your first meal. Some research suggests potential benefits from time-restricted eating (like skipping breakfast), though results are mixed.",
+      "reasoning": "The breakfast myth largely originated from marketing and observational studies that showed correlations (not causation) between breakfast eating and health outcomes. These studies didn't account for overall lifestyle differences between breakfast eaters and skippers. Recent controlled trials show that whether you eat breakfast has minimal impact on weight loss or metabolism. Your body is perfectly capable of functioning without breakfast if you're not hungry—you won't enter 'starvation mode' or harm your metabolism.",
+      "scientificBasis": "Multiple randomized controlled trials have found that breakfast consumption doesn't significantly affect weight loss or metabolic rate compared to skipping breakfast. A comprehensive review published in the BMJ found that breakfast recommendations for weight loss aren't supported by evidence. The key is overall diet quality and listening to hunger signals.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["nutrition", "diet", "metabolism", "myth-busting"],
+      "backgroundImage": "/images/breakfast-bg.jpg",
+      "iconImage": "/icons/breakfast.svg",
+      "sources": [
+        {
+          "title": "Effect of breakfast on weight and energy intake",
+          "url": "https://www.bmj.com/content/364/bmj.l42",
+          "type": "study",
+          "organization": "BMJ"
+        }
+      ],
+      "relatedQuestions": ["intermittent-fasting", "eat-small-frequent-meals"],
+      "meta": {
+        "title": "Should I eat breakfast every day? - ShouldI",
+        "description": "Not necessarily! Learn what science really says about breakfast and why it may not be as important as you think.",
+        "keywords": "breakfast, nutrition, intermittent fasting, meal timing",
+        "ogImage": "/og-images/breakfast.jpg"
+      }
+    },
+    {
+      "id": "stretch-before-exercise",
+      "slug": "stretch-before-exercise",
+      "question": "Should I stretch before exercising?",
+      "shortAnswer": "No",
+      "answer": "No, static stretching before exercise doesn't prevent injury and may reduce performance. Dynamic warm-ups are more effective.",
+      "description": "Contrary to traditional advice, static stretching (holding stretches) before exercise doesn't reduce injury risk and can temporarily decrease strength and power. Instead, perform a dynamic warm-up with movement-based exercises that gradually increase heart rate and prepare muscles for activity. Save static stretching for after exercise or as a separate flexibility session when muscles are warm.",
+      "reasoning": "Static stretching before exercise can temporarily reduce muscle force production and athletic performance, particularly for activities requiring power or strength. Research shows it doesn't significantly prevent injuries. A proper warm-up should increase blood flow, raise body temperature, and prepare neuromuscular pathways for the specific movements you'll perform. Dynamic stretching accomplishes this while static stretching doesn't. Post-exercise stretching, when muscles are warm, is ideal for improving flexibility.",
+      "scientificBasis": "Multiple systematic reviews and meta-analyses have found that pre-exercise static stretching doesn't reduce overall injury risk and can impair performance in strength, power, and speed activities. The American College of Sports Medicine recommends dynamic warm-ups rather than static stretching before exercise.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["exercise", "injury-prevention", "fitness", "stretching"],
+      "backgroundImage": "/images/stretch-bg.jpg",
+      "iconImage": "/icons/stretching.svg",
+      "sources": [
+        {
+          "title": "Stretching to Prevent or Reduce Muscle Soreness After Exercise",
+          "url": "https://www.cochrane.org/CD004577/MUSKINJ_stretching-prevent-or-reduce-muscle-soreness-after-exercise",
+          "type": "study",
+          "organization": "Cochrane Library"
+        }
+      ],
+      "relatedQuestions": ["warm-up-before-exercise", "cool-down-after-exercise"],
+      "meta": {
+        "title": "Should I stretch before exercising? - ShouldI",
+        "description": "Actually, no! Learn why static stretching before exercise isn't beneficial and what to do instead.",
+        "keywords": "stretching, exercise, warm-up, injury prevention, fitness",
+        "ogImage": "/og-images/stretch.jpg"
+      }
+    },
+    {
+      "id": "microwave-plastic-containers",
+      "slug": "microwave-plastic-containers",
+      "question": "Should I microwave food in plastic containers?",
+      "shortAnswer": "No",
+      "answer": "No, you should avoid microwaving food in plastic containers unless they're specifically labeled as microwave-safe, and even then use caution.",
+      "description": "Heating plastic can cause chemicals to leach into food, especially with fatty or acidic foods. Many plastics contain compounds like phthalates and BPA that may disrupt hormones. While some plastics are designed for microwave use, glass or ceramic containers are safer alternatives. Never microwave takeout containers, margarine tubs, or other plastics not designed for heating. If you must use plastic, ensure it's labeled microwave-safe and avoid heating it when damaged or worn.",
+      "reasoning": "Heat causes plastic molecules to break down and migrate into food more readily. Certain plasticizers and additives can leach even from food-grade plastics when heated. These chemicals are endocrine disruptors that may affect development, reproduction, and other bodily functions. The effects of long-term, low-level exposure are still being studied, but minimizing exposure is prudent. Fat and acid in foods increase chemical migration from plastic.",
+      "scientificBasis": "Research has documented chemical migration from plastics into food, particularly when heated. The FDA regulates microwave-safe plastics, but scientists have raised concerns about cumulative exposure to plastic-derived chemicals. Studies have found measurable amounts of phthalates and BPA in people's bodies, with diet being a significant exposure route.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["food-safety", "chemicals", "cooking", "microwave"],
+      "backgroundImage": "/images/microwave-bg.jpg",
+      "iconImage": "/icons/microwave.svg",
+      "sources": [
+        {
+          "title": "Food Safety and Inspection: Plastics",
+          "url": "https://www.fda.gov/food/food-ingredients-packaging/food-packaging-materials",
+          "type": "guideline",
+          "organization": "Food and Drug Administration"
+        }
+      ],
+      "relatedQuestions": ["use-bpa-free-plastic", "store-food-safely"],
+      "meta": {
+        "title": "Should I microwave food in plastic containers? - ShouldI",
+        "description": "No! Learn about the risks of heating plastic and safer alternatives for microwave cooking.",
+        "keywords": "microwave safety, plastic containers, food safety, BPA, chemical leaching",
+        "ogImage": "/og-images/microwave.jpg"
+      }
+    },
+    {
+      "id": "use-antibacterial-soap",
+      "slug": "use-antibacterial-soap",
+      "question": "Should I use antibacterial soap?",
+      "shortAnswer": "No",
+      "answer": "No, regular soap and water is just as effective as antibacterial soap for everyday handwashing and carries fewer risks.",
+      "description": "Antibacterial soaps containing triclosan or triclocarban are not more effective than regular soap for preventing illness in household settings. The FDA banned these ingredients in consumer soaps due to lack of evidence for benefits and concerns about antibiotic resistance, hormone disruption, and environmental harm. Plain soap works by mechanically removing germs rather than killing them, which is sufficient for routine hygiene. Save antimicrobial products for healthcare settings where they're specifically needed.",
+      "reasoning": "Regular soap doesn't kill bacteria but removes them from your skin along with dirt and oils, which is adequate for preventing most infections. The mechanical action of washing and rinsing is what matters most. Antibacterial soaps may contribute to antibiotic resistance by creating selection pressure for resistant bacteria. They also kill beneficial bacteria on your skin. Studies show no advantage over regular soap for preventing infections in healthy people at home.",
+      "scientificBasis": "The FDA reviewed data on antibacterial soaps and found no evidence they're more effective than plain soap and water for preventing illness. In 2016, the FDA banned triclosan and 18 other antibacterial ingredients from consumer soaps, citing insufficient safety data and potential risks. The CDC recommends plain soap and water for routine handwashing.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["hygiene", "handwashing", "antibiotics", "disease-prevention"],
+      "backgroundImage": "/images/soap-bg.jpg",
+      "iconImage": "/icons/soap.svg",
+      "sources": [
+        {
+          "title": "Antibacterial Soap? You Can Skip It",
+          "url": "https://www.fda.gov/consumers/consumer-updates/antibacterial-soap-you-can-skip-it-use-plain-soap-and-water",
+          "type": "guideline",
+          "organization": "Food and Drug Administration"
+        }
+      ],
+      "relatedQuestions": ["wash-hands-after-restroom", "use-hand-sanitizer"],
+      "meta": {
+        "title": "Should I use antibacterial soap? - ShouldI",
+        "description": "No! Learn why regular soap is just as effective and why antibacterial soaps were banned by the FDA.",
+        "keywords": "antibacterial soap, handwashing, hygiene, triclosan, soap",
+        "ogImage": "/og-images/soap.jpg"
+      }
+    },
+    {
+      "id": "charge-phone-overnight",
+      "slug": "charge-phone-overnight",
+      "question": "Should I charge my phone overnight?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, it's safe to charge your phone overnight. Modern smartphones have protections against overcharging and battery damage.",
+      "description": "Modern smartphones use lithium-ion batteries with built-in charging management systems that prevent overcharging. Once the battery reaches 100%, the phone stops drawing significant power from the charger. Many phones now have features like optimized charging that slows charging near 100% or learns your schedule to minimize time at full charge. Overnight charging won't damage your battery any more than daytime charging, though keeping batteries between 20-80% can theoretically extend their lifespan slightly.",
+      "reasoning": "Lithium-ion batteries can be damaged by staying at 100% charge for extended periods, but modern phones mitigate this with intelligent charging systems. They use trickle charging near full capacity and often stop charging at 100% until the battery drops slightly. The battery management system prevents overcharging damage. The concern about overnight charging comes from older battery technologies that actually could be harmed by overcharging, but this isn't relevant to modern devices.",
+      "scientificBasis": "Battery research shows that modern charge management systems effectively protect lithium-ion batteries from overcharge damage. While keeping batteries at high charge states does accelerate aging slightly compared to mid-range charging, the convenience of overnight charging and the built-in protections make this a negligible concern for most users who will replace their phone before battery health becomes problematic.",
+      "confidence": "high",
+      "category": "technology",
+      "tags": ["smartphone", "battery", "charging", "device-care"],
+      "backgroundImage": "/images/charging-bg.jpg",
+      "iconImage": "/icons/battery.svg",
+      "sources": [
+        {
+          "title": "Lithium-Ion Battery Care Guide",
+          "url": "https://batteryuniversity.com/article/bu-808-how-to-prolong-lithium-based-batteries",
+          "type": "article",
+          "organization": "Battery University"
+        }
+      ],
+      "relatedQuestions": ["let-phone-battery-drain", "use-fast-charging"],
+      "meta": {
+        "title": "Should I charge my phone overnight? - ShouldI",
+        "description": "Yes, it's safe! Learn why modern smartphones protect against overcharging and battery damage.",
+        "keywords": "phone charging, overnight charging, battery health, smartphone care",
+        "ogImage": "/og-images/charging.jpg"
+      }
+    }
+  ]
+}

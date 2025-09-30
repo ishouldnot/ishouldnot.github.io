@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should I? - Science-Based Answers</title>
+    <meta name="description" content="Get clear, science-based answers to everyday questions.">
+    <meta property="og:title" content="Should I? - Science-Based Answers">
+    <meta property="og:description" content="Get clear, science-based answers to everyday questions.">
+    <meta property="og:image" content="/og-images/default.jpg">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .answer-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .answer-badge.yes {
+            background: #10b981;
+            color: white;
+        }
+
+        .answer-badge.no {
+            background: #ef4444;
+            color: white;
+        }
+
+        .question {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .answer {
+            font-size: 1.3em;
+            color: #4b5563;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .description {
+            font-size: 1.1em;
+            color: #374151;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .reasoning {
+            background: #fef3c7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .reasoning h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .scientific-basis {
+            background: #dbeafe;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .scientific-basis h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .confidence {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .confidence.high {
+            background: #10b981;
+            color: white;
+        }
+
+        .confidence.medium {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .confidence.low {
+            background: #ef4444;
+            color: white;
+        }
+
+        .sources {
+            margin: 30px 0;
+        }
+
+        .sources h3 {
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .source-item {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .source-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .source-item a:hover {
+            text-decoration: underline;
+        }
+
+        .source-org {
+            color: #6b7280;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .tags {
+            margin: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e5e7eb;
+            color: #4b5563;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            margin: 5px 5px 5px 0;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-outline {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .related-questions {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        .related-questions h3 {
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .related-link {
+            display: block;
+            padding: 12px 20px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .related-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1f2937;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            padding: 50px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 20px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .question {
+                font-size: 1.5em;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Should I?</h1>
+            <p>Clear, science-based answers to everyday questions</p>
+        </header>
+
+        <div id="app">
+            <div class="loading">Loading questions...</div>
+        </div>
+
+        <footer>
+            <p>All answers are based on current scientific evidence and expert guidelines.</p>
+            <p>Made with ❤️ for informed decision making</p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script>
+        // Questions data (in production, this would be loaded from questions.json)
+        let questionsData = null;
+        let currentQuestion = null;
+
+        // Initialize the app
+        async function init() {
+            try {
+                // In production: 
+                const response = await fetch('questions.json');
+                // For demo, we'll use the data directly
+                // questionsData = {
+                //     "version": "1.0",
+                //     "lastUpdated": "2025-09-30",
+                //     "questions": [
+                //         {
+                //             "id": "brush-teeth-before-bed",
+                //             "slug": "brush-teeth-before-bed",
+                //             "question": "Should I brush my teeth before bed?",
+                //             "shortAnswer": "Yes",
+                //             "answer": "Yes, you should brush your teeth before bed every night.",
+                //             "description": "Brushing your teeth before bed removes food particles and plaque that accumulate throughout the day. During sleep, saliva production decreases, which means bacteria can multiply more easily and produce acids that attack tooth enamel. Nighttime brushing is crucial for preventing cavities, gum disease, and bad breath.",
+                //             "reasoning": "When you sleep, your mouth produces less saliva, which normally helps wash away food particles and neutralize acids. This creates an ideal environment for bacteria to thrive. Brushing before bed removes the bacterial film (plaque) and food debris that would otherwise feed harmful bacteria for 6-8 hours while you sleep.",
+                //             "scientificBasis": "The American Dental Association recommends brushing twice daily for two minutes with fluoride toothpaste. Studies show that nighttime brushing significantly reduces the risk of dental caries and periodontal disease.",
+                //             "confidence": "high",
+                //             "category": "health",
+                //             "tags": ["dental", "hygiene", "sleep", "preventive-care"],
+                //             "sources": [
+                //                 {
+                //                     "title": "Toothbrushing Recommendations",
+                //                     "url": "https://www.ada.org/en/member-center/oral-health-topics/toothbrushes",
+                //                     "type": "guideline",
+                //                     "organization": "American Dental Association"
+                //                 }
+                //             ],
+                //             "relatedQuestions": ["floss-daily", "use-mouthwash"]
+                //         },
+                //         {
+                //             "id": "wash-hands-after-restroom",
+                //             "slug": "wash-hands-after-restroom",
+                //             "question": "Should I wash my hands after using the restroom?",
+                //             "shortAnswer": "Yes",
+                //             "answer": "Yes, you should always wash your hands after using the restroom.",
+                //             "description": "Washing your hands after using the restroom is one of the most important hygiene practices for preventing the spread of germs and disease. Even if you don't directly touch contaminated surfaces, bacteria and viruses can be present in restroom environments and on surfaces like door handles, flush levers, and faucets.",
+                //             "reasoning": "Restrooms harbor numerous pathogens including E. coli, norovirus, salmonella, and other harmful bacteria and viruses. These microorganisms can cause gastrointestinal illnesses, respiratory infections, and other diseases. Proper handwashing with soap and water for at least 20 seconds removes these pathogens and prevents transmission to yourself and others.",
+                //             "scientificBasis": "The CDC identifies handwashing as one of the most effective ways to prevent the spread of infection. Studies show that proper handwashing can reduce diarrheal diseases by up to 40% and respiratory infections by up to 21%.",
+                //             "confidence": "high",
+                //             "category": "health",
+                //             "tags": ["hygiene", "disease-prevention", "public-health", "bacteria"],
+                //             "sources": [
+                //                 {
+                //                     "title": "Handwashing: Clean Hands Save Lives",
+                //                     "url": "https://www.cdc.gov/handwashing/",
+                //                     "type": "guideline",
+                //                     "organization": "Centers for Disease Control and Prevention"
+                //                 }
+                //             ],
+                //             "relatedQuestions": ["use-hand-sanitizer", "wash-hands-before-eating"]
+                //         },
+                //         {
+                //             "id": "wear-sunscreen-daily",
+                //             "slug": "wear-sunscreen-daily",
+                //             "question": "Should I wear sunscreen every day?",
+                //             "shortAnswer": "Yes",
+                //             "answer": "Yes, you should wear sunscreen every day, even when it's cloudy or you're indoors near windows.",
+                //             "description": "Daily sunscreen use protects your skin from harmful ultraviolet (UV) radiation that can cause premature aging, sunburn, and skin cancer. UV rays penetrate through clouds and windows, meaning you're exposed even on overcast days or while indoors. Dermatologists recommend using broad-spectrum sunscreen with at least SPF 30 on all exposed skin.",
+                //             "reasoning": "UV radiation damages DNA in skin cells, leading to mutations that can cause skin cancer. Up to 90% of visible skin aging is caused by sun exposure. UVA rays (which cause aging) penetrate glass and clouds, while UVB rays (which cause burning) are strongest during midday but present year-round. Regular sunscreen use reduces melanoma risk by 50% and squamous cell carcinoma risk by 40%.",
+                //             "scientificBasis": "The American Academy of Dermatology states that daily sunscreen use is one of the most effective ways to prevent skin cancer and premature aging. Multiple long-term studies have demonstrated that regular sunscreen application significantly reduces skin cancer incidence.",
+                //             "confidence": "high",
+                //             "category": "health",
+                //             "tags": ["skin-care", "cancer-prevention", "sun-protection", "preventive-care"],
+                //             "sources": [
+                //                 {
+                //                     "title": "Sunscreen FAQs",
+                //                     "url": "https://www.aad.org/public/everyday-care/sun-protection/sunscreen-patients/sunscreen-faqs",
+                //                     "type": "guideline",
+                //                     "organization": "American Academy of Dermatology"
+                //                 }
+                //             ],
+                //             "relatedQuestions": ["reapply-sunscreen", "wear-sunscreen-indoors"]
+                //         }
+                //     ]
+                // };
+
+                displayQuestion();
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                document.getElementById('app').innerHTML = '<div class="card"><p>Error loading questions. Please refresh the page.</p></div>';
+            }
+        }
+
+        // Get question from URL hash
+        function getQuestionFromURL() {
+            const hash = window.location.hash.substring(1);
+            if (hash && questionsData) {
+                return questionsData.questions.find(q => q.slug === hash);
+            }
+            return null;
+        }
+
+        // Get random question
+        function getRandomQuestion() {
+            const randomIndex = Math.floor(Math.random() * questionsData.questions.length);
+            return questionsData.questions[randomIndex];
+        }
+
+        // Display question
+        function displayQuestion() {
+            let question = getQuestionFromURL();
+            
+            if (!question) {
+                question = getRandomQuestion();
+                // Update URL without page reload
+                history.replaceState(null, null, `#${question.slug}`);
+            }
+
+            currentQuestion = question;
+            updateMetaTags(question);
+            renderQuestion(question);
+        }
+
+        // Render question HTML
+        function renderQuestion(q) {
+            const app = document.getElementById('app');
+            
+            const answerClass = q.shortAnswer.toLowerCase();
+            const confidenceClass = q.confidence;
+
+            let sourcesHTML = '';
+            if (q.sources && q.sources.length > 0) {
+                sourcesHTML = `
+                    <div class="sources">
+                        <h3>Sources</h3>
+                        ${q.sources.map(source => `
+                            <div class="source-item">
+                                <a href="${source.url}" target="_blank" rel="noopener noreferrer">${source.title}</a>
+                                <div class="source-org">${source.organization} • ${source.type}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            let tagsHTML = '';
+            if (q.tags && q.tags.length > 0) {
+                tagsHTML = `
+                    <div class="tags">
+                        ${q.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+            }
+
+            let relatedHTML = '';
+            if (q.relatedQuestions && q.relatedQuestions.length > 0) {
+                relatedHTML = `
+                    <div class="related-questions">
+                        <h3>Related Questions</h3>
+                        ${q.relatedQuestions.map(slug => {
+                            const relatedQ = questionsData.questions.find(item => item.slug === slug);
+                            if (relatedQ) {
+                                return `<a href="#${slug}" class="related-link">${relatedQ.question}</a>`;
+                            }
+                            return '';
+                        }).join('')}
+                    </div>
+                `;
+            }
+
+            app.innerHTML = `
+                <div class="card">
+                    <div class="answer-badge ${answerClass}">${q.shortAnswer}</div>
+                    <h1 class="question">${q.question}</h1>
+                    
+                    <div class="answer">${q.answer}</div>
+                    
+                    <div class="description">${q.description}</div>
+                    
+                    <div class="reasoning">
+                        <h3>Why?</h3>
+                        <p>${q.reasoning}</p>
+                    </div>
+                    
+                    <div class="scientific-basis">
+                        <h3>Scientific Basis</h3>
+                        <p>${q.scientificBasis}</p>
+                    </div>
+                    
+                    <div class="confidence ${confidenceClass}">
+                        Confidence: ${q.confidence}
+                    </div>
+                    
+                    ${tagsHTML}
+                    ${sourcesHTML}
+                    
+                    <div class="actions">
+                        <button class="btn btn-primary" onclick="loadRandomQuestion()">
+                            🎲 Random Question
+                        </button>
+                        <button class="btn btn-secondary" onclick="shareQuestion()">
+                            📤 Share This
+                        </button>
+                        <button class="btn btn-outline" onclick="copyLink()">
+                            🔗 Copy Link
+                        </button>
+                    </div>
+                    
+                    ${relatedHTML}
+                </div>
+            `;
+        }
+
+        // Update meta tags for sharing
+        function updateMetaTags(q) {
+            document.title = q.meta?.title || `${q.question} - Should I?`;
+            
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.content = q.meta?.description || q.answer;
+            }
+            
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) {
+                ogTitle.content = q.meta?.title || q.question;
+            }
+            
+            const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (ogDescription) {
+                ogDescription.content = q.meta?.description || q.answer;
+            }
+        }
+
+        // Load random question
+        function loadRandomQuestion() {
+            const question = getRandomQuestion();
+            window.location.hash = question.slug;
+        }
+
+        // Share question
+        async function shareQuestion() {
+            const url = window.location.href;
+            const text = `${currentQuestion.question}\n\n${currentQuestion.answer}`;
+            
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: currentQuestion.question,
+                        text: text,
+                        url: url
+                    });
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        copyLink();
+                    }
+                }
+            } else {
+                copyLink();
+            }
+        }
+
+        // Copy link to clipboard
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                showToast('Link copied to clipboard!');
+            }).catch(() => {
+                showToast('Could not copy link');
+            });
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', displayQuestion);
+
+        // Initialize on page load
+        init();
+    </script>
+</body>
+</html>
