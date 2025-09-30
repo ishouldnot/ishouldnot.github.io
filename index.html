@@ -375,82 +375,8 @@
         // Initialize the app
         async function init() {
             try {
-                // In production: 
-                const response = await fetch('questions.json');
-                // For demo, we'll use the data directly
-                // questionsData = {
-                //     "version": "1.0",
-                //     "lastUpdated": "2025-09-30",
-                //     "questions": [
-                //         {
-                //             "id": "brush-teeth-before-bed",
-                //             "slug": "brush-teeth-before-bed",
-                //             "question": "Should I brush my teeth before bed?",
-                //             "shortAnswer": "Yes",
-                //             "answer": "Yes, you should brush your teeth before bed every night.",
-                //             "description": "Brushing your teeth before bed removes food particles and plaque that accumulate throughout the day. During sleep, saliva production decreases, which means bacteria can multiply more easily and produce acids that attack tooth enamel. Nighttime brushing is crucial for preventing cavities, gum disease, and bad breath.",
-                //             "reasoning": "When you sleep, your mouth produces less saliva, which normally helps wash away food particles and neutralize acids. This creates an ideal environment for bacteria to thrive. Brushing before bed removes the bacterial film (plaque) and food debris that would otherwise feed harmful bacteria for 6-8 hours while you sleep.",
-                //             "scientificBasis": "The American Dental Association recommends brushing twice daily for two minutes with fluoride toothpaste. Studies show that nighttime brushing significantly reduces the risk of dental caries and periodontal disease.",
-                //             "confidence": "high",
-                //             "category": "health",
-                //             "tags": ["dental", "hygiene", "sleep", "preventive-care"],
-                //             "sources": [
-                //                 {
-                //                     "title": "Toothbrushing Recommendations",
-                //                     "url": "https://www.ada.org/en/member-center/oral-health-topics/toothbrushes",
-                //                     "type": "guideline",
-                //                     "organization": "American Dental Association"
-                //                 }
-                //             ],
-                //             "relatedQuestions": ["floss-daily", "use-mouthwash"]
-                //         },
-                //         {
-                //             "id": "wash-hands-after-restroom",
-                //             "slug": "wash-hands-after-restroom",
-                //             "question": "Should I wash my hands after using the restroom?",
-                //             "shortAnswer": "Yes",
-                //             "answer": "Yes, you should always wash your hands after using the restroom.",
-                //             "description": "Washing your hands after using the restroom is one of the most important hygiene practices for preventing the spread of germs and disease. Even if you don't directly touch contaminated surfaces, bacteria and viruses can be present in restroom environments and on surfaces like door handles, flush levers, and faucets.",
-                //             "reasoning": "Restrooms harbor numerous pathogens including E. coli, norovirus, salmonella, and other harmful bacteria and viruses. These microorganisms can cause gastrointestinal illnesses, respiratory infections, and other diseases. Proper handwashing with soap and water for at least 20 seconds removes these pathogens and prevents transmission to yourself and others.",
-                //             "scientificBasis": "The CDC identifies handwashing as one of the most effective ways to prevent the spread of infection. Studies show that proper handwashing can reduce diarrheal diseases by up to 40% and respiratory infections by up to 21%.",
-                //             "confidence": "high",
-                //             "category": "health",
-                //             "tags": ["hygiene", "disease-prevention", "public-health", "bacteria"],
-                //             "sources": [
-                //                 {
-                //                     "title": "Handwashing: Clean Hands Save Lives",
-                //                     "url": "https://www.cdc.gov/handwashing/",
-                //                     "type": "guideline",
-                //                     "organization": "Centers for Disease Control and Prevention"
-                //                 }
-                //             ],
-                //             "relatedQuestions": ["use-hand-sanitizer", "wash-hands-before-eating"]
-                //         },
-                //         {
-                //             "id": "wear-sunscreen-daily",
-                //             "slug": "wear-sunscreen-daily",
-                //             "question": "Should I wear sunscreen every day?",
-                //             "shortAnswer": "Yes",
-                //             "answer": "Yes, you should wear sunscreen every day, even when it's cloudy or you're indoors near windows.",
-                //             "description": "Daily sunscreen use protects your skin from harmful ultraviolet (UV) radiation that can cause premature aging, sunburn, and skin cancer. UV rays penetrate through clouds and windows, meaning you're exposed even on overcast days or while indoors. Dermatologists recommend using broad-spectrum sunscreen with at least SPF 30 on all exposed skin.",
-                //             "reasoning": "UV radiation damages DNA in skin cells, leading to mutations that can cause skin cancer. Up to 90% of visible skin aging is caused by sun exposure. UVA rays (which cause aging) penetrate glass and clouds, while UVB rays (which cause burning) are strongest during midday but present year-round. Regular sunscreen use reduces melanoma risk by 50% and squamous cell carcinoma risk by 40%.",
-                //             "scientificBasis": "The American Academy of Dermatology states that daily sunscreen use is one of the most effective ways to prevent skin cancer and premature aging. Multiple long-term studies have demonstrated that regular sunscreen application significantly reduces skin cancer incidence.",
-                //             "confidence": "high",
-                //             "category": "health",
-                //             "tags": ["skin-care", "cancer-prevention", "sun-protection", "preventive-care"],
-                //             "sources": [
-                //                 {
-                //                     "title": "Sunscreen FAQs",
-                //                     "url": "https://www.aad.org/public/everyday-care/sun-protection/sunscreen-patients/sunscreen-faqs",
-                //                     "type": "guideline",
-                //                     "organization": "American Academy of Dermatology"
-                //                 }
-                //             ],
-                //             "relatedQuestions": ["reapply-sunscreen", "wear-sunscreen-indoors"]
-                //         }
-                //     ]
-                // };
-
+                const response = await fetch('https://ishouldnot.github.io/questions.json');
+                questionsData = await response.json();
                 displayQuestion();
             } catch (error) {
                 console.error('Error loading questions:', error);
