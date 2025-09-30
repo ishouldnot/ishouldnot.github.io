@@ -631,6 +631,126 @@
         "keywords": "phone charging, overnight charging, battery health, smartphone care",
         "ogImage": "/og-images/charging.jpg"
       }
+    },
+    {
+      "id": "drink-alcohol-moderately",
+      "slug": "drink-alcohol-moderately",
+      "question": "Should I drink alcohol in moderation for health benefits?",
+      "shortAnswer": "No",
+      "answer": "No, there is no safe level of alcohol consumption, and even moderate drinking carries health risks.",
+      "description": "Recent research has overturned the long-held belief that moderate alcohol consumption provides health benefits. No amount of alcohol is safe for health. While older studies suggested cardiovascular benefits from moderate drinking, these have been debunked due to methodological flaws. Alcohol is a carcinogen that increases risk of several cancers, damages the liver, impairs brain function, and contributes to numerous other health problems even at low levels of consumption.",
+      "reasoning": "Previous studies showing health benefits from moderate drinking failed to account for confounding factors. Many abstainers in these studies were former heavy drinkers who quit due to health problems, making the abstainer group appear less healthy. When properly controlled studies are conducted, no health benefits emerge from alcohol consumption at any level. Alcohol is metabolized into acetaldehyde, a toxic compound that damages DNA and causes cancer. Even small amounts increase risk of breast cancer, liver disease, and other conditions.",
+      "scientificBasis": "The Global Burden of Disease study, analyzing data from 195 countries, concluded that the safest level of alcohol consumption is zero. The World Health Organization states that no level of alcohol consumption is safe for health. Major medical organizations have revised their guidance to reflect current evidence showing alcohol's harms outweigh any potential benefits.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["alcohol", "cancer-prevention", "liver-health", "cardiovascular-health"],
+      "backgroundImage": "/images/alcohol-bg.jpg",
+      "iconImage": "/icons/no-alcohol.svg",
+      "sources": [
+        {
+          "title": "No level of alcohol consumption is safe for our health",
+          "url": "https://www.who.int/europe/news/item/04-01-2023-no-level-of-alcohol-consumption-is-safe-for-our-health",
+          "type": "guideline",
+          "organization": "World Health Organization"
+        }
+      ],
+      "relatedQuestions": ["quit-drinking", "alcohol-cancer-risk"],
+      "meta": {
+        "title": "Should I drink alcohol in moderation for health benefits? - ShouldI",
+        "description": "No! Learn why recent research shows no safe level of alcohol consumption and debunks the moderate drinking myth.",
+        "keywords": "alcohol, moderate drinking, health risks, cancer prevention",
+        "ogImage": "/og-images/alcohol.jpg"
+      }
+    },
+    {
+      "id": "take-vitamin-d-supplement",
+      "slug": "take-vitamin-d-supplement",
+      "question": "Should I take a vitamin D supplement?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, many people benefit from vitamin D supplementation, especially those living in northern climates or with limited sun exposure.",
+      "description": "Vitamin D deficiency is widespread, particularly in northern latitudes, during winter months, in people with darker skin, and in those who spend most time indoors. Unlike most vitamins, getting adequate vitamin D from food alone is difficult. While sun exposure can produce vitamin D, many factors limit this including geography, season, sunscreen use, and skin tone. Supplementation of 1000-2000 IU daily is safe and helps maintain adequate levels for most adults.",
+      "reasoning": "Vitamin D is essential for bone health, immune function, and numerous other bodily processes. Deficiency increases risk of osteoporosis, fractures, infections, and may contribute to autoimmune diseases and depression. Few foods naturally contain vitamin D, and the amount needed cannot realistically be obtained from diet. Sun exposure is unreliable due to seasonal variation and skin cancer concerns. Blood testing can determine if supplementation is needed, but many health organizations recommend supplementation for at-risk groups without testing.",
+      "scientificBasis": "The Endocrine Society recommends vitamin D supplementation for groups at risk of deficiency. Research shows widespread deficiency in many populations, particularly in northern regions. While controversy exists about optimal levels, there is strong consensus that correcting deficiency through supplementation improves bone health and may provide other benefits.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["vitamins", "supplements", "bone-health", "immune-system"],
+      "backgroundImage": "/images/vitamin-d-bg.jpg",
+      "iconImage": "/icons/sun-supplement.svg",
+      "sources": [
+        {
+          "title": "Vitamin D: Fact Sheet for Health Professionals",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+          "type": "guideline",
+          "organization": "National Institutes of Health"
+        }
+      ],
+      "relatedQuestions": ["get-vitamin-d-from-sun", "test-vitamin-d-levels"],
+      "meta": {
+        "title": "Should I take a vitamin D supplement? - ShouldI",
+        "description": "Yes! Learn why vitamin D supplementation is recommended for many people and how it supports health.",
+        "keywords": "vitamin D, supplements, bone health, deficiency",
+        "ogImage": "/og-images/vitamin-d.jpg"
+      }
+    },
+    {
+      "id": "use-standing-desk",
+      "slug": "use-standing-desk",
+      "question": "Should I use a standing desk?",
+      "shortAnswer": "No",
+      "answer": "No, standing desks alone don't provide significant health benefits. Movement and position changes throughout the day are what matter.",
+      "description": "While prolonged sitting is associated with health risks, simply standing in place instead doesn't solve the problem. Standing desks can cause leg fatigue, varicose veins, and back pain if used for extended periods. The key is movement and position variation, not standing versus sitting. Research shows that standing desks don't improve productivity, weight loss, or cardiovascular health. The best approach is alternating between sitting and standing, taking movement breaks, and incorporating walking throughout the day.",
+      "reasoning": "The harm from prolonged sitting comes from lack of movement and muscle activity, not from the sitting position itself. Standing still for hours simply replaces one static posture with another and can cause its own problems including lower back pain, leg swelling, and foot problems. Studies comparing standing desks to regular desks find no significant health benefits. What matters is breaking up prolonged static positions with movement, regardless of whether you're sitting or standing.",
+      "scientificBasis": "Systematic reviews of standing desk research show minimal to no benefits for health outcomes including cardiovascular health, metabolic markers, or musculoskeletal problems. Some studies show standing desks may actually decrease productivity initially. The evidence supports regular movement breaks and position changes rather than simply standing more.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["ergonomics", "workplace-health", "exercise", "posture"],
+      "backgroundImage": "/images/standing-desk-bg.jpg",
+      "iconImage": "/icons/desk.svg",
+      "sources": [
+        {
+          "title": "Standing Desks and Health: A Systematic Review",
+          "url": "https://www.cochrane.org/CD012612/PUBHLTH_workplace-interventions-reduce-sitting-work",
+          "type": "study",
+          "organization": "Cochrane Library"
+        }
+      ],
+      "relatedQuestions": ["take-movement-breaks", "improve-posture"],
+      "meta": {
+        "title": "Should I use a standing desk? - ShouldI",
+        "description": "Not necessarily! Learn why movement matters more than standing and what actually improves workplace health.",
+        "keywords": "standing desk, workplace health, ergonomics, sitting",
+        "ogImage": "/og-images/standing-desk.jpg"
+      }
+    },
+    {
+      "id": "detox-cleanse",
+      "slug": "detox-cleanse",
+      "question": "Should I do a detox or cleanse?",
+      "shortAnswer": "No",
+      "answer": "No, detox cleanses are unnecessary and potentially harmful. Your liver and kidneys naturally detoxify your body constantly.",
+      "description": "Commercial detox products and cleanse diets are not supported by science. Your body has sophisticated detoxification systems—primarily the liver, kidneys, digestive system, skin, and lungs—that work continuously to eliminate waste and toxins. No juice cleanse, supplement, or special diet can improve on these organs' function. Many detox products can actually be dangerous, causing dehydration, electrolyte imbalances, or nutrient deficiencies. The best way to support your body's natural detoxification is eating a balanced diet, staying hydrated, and getting adequate sleep.",
+      "reasoning": "The detox industry is built on pseudoscience and marketing rather than evidence. Proponents rarely specify which 'toxins' are being removed or how their products remove them. When tested, detox products show no measurable effect on toxin levels. Some cleanses involve severe caloric restriction or eliminating entire food groups, leading to fatigue, muscle loss, and nutritional deficiencies. Any weight loss is typically water weight and returns immediately after the cleanse ends. Your organs don't need 'help' from expensive products—they're designed to eliminate waste efficiently.",
+      "scientificBasis": "No credible scientific evidence supports the effectiveness of commercial detox products or cleanses. Medical experts and nutrition scientists consistently debunk detox claims. The only people who might need medical detoxification are those withdrawing from alcohol or drugs, which requires professional medical supervision, not juice cleanses.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["nutrition", "detox", "pseudoscience", "diet"],
+      "backgroundImage": "/images/detox-bg.jpg",
+      "iconImage": "/icons/no-detox.svg",
+      "sources": [
+        {
+          "title": "Detoxes and Cleanses: What You Need to Know",
+          "url": "https://www.nccih.nih.gov/health/detoxes-and-cleanses-what-you-need-to-know",
+          "type": "guideline",
+          "organization": "National Center for Complementary and Integrative Health"
+        }
+      ],
+      "relatedQuestions": ["eat-balanced-diet", "support-liver-health"],
+      "meta": {
+        "title": "Should I do a detox or cleanse? - ShouldI",
+        "description": "No! Learn why detox products are pseudoscience and how your body naturally detoxifies itself.",
+        "keywords": "detox, cleanse, pseudoscience, liver function, nutrition",
+        "ogImage": "/og-images/detox.jpg"
+      }
     }
   ]
 }
