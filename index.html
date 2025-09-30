@@ -417,6 +417,7 @@
             currentQuestion = question;
             updateMetaTags(question);
             renderQuestion(question);
+            updateAutoPlayButton();
         }
 
         // Render question HTML
@@ -550,12 +551,7 @@
         // Start auto-play
         function startAutoPlay() {
             isAutoPlaying = true;
-            const autoPlayBtn = document.querySelector('.btn-auto-play');
-            if (autoPlayBtn) {
-                autoPlayBtn.textContent = '⏸️ Stop Auto-Play';
-                autoPlayBtn.classList.remove('btn-outline');
-                autoPlayBtn.classList.add('btn-primary');
-            }
+            updateAutoPlayButton();
             
             autoPlayInterval = setInterval(() => {
                 loadRandomQuestion();
@@ -565,16 +561,27 @@
         // Stop auto-play
         function stopAutoPlay() {
             isAutoPlaying = false;
-            const autoPlayBtn = document.querySelector('.btn-auto-play');
-            if (autoPlayBtn) {
-                autoPlayBtn.textContent = '▶️ Auto-Play';
-                autoPlayBtn.classList.remove('btn-primary');
-                autoPlayBtn.classList.add('btn-outline');
-            }
+            updateAutoPlayButton();
             
             if (autoPlayInterval) {
                 clearInterval(autoPlayInterval);
                 autoPlayInterval = null;
+            }
+        }
+
+        // Update auto-play button appearance
+        function updateAutoPlayButton() {
+            const autoPlayBtn = document.querySelector('.btn-auto-play');
+            if (autoPlayBtn) {
+                if (isAutoPlaying) {
+                    autoPlayBtn.textContent = '⏸️ Stop Auto-Play';
+                    autoPlayBtn.classList.remove('btn-outline');
+                    autoPlayBtn.classList.add('btn-primary');
+                } else {
+                    autoPlayBtn.textContent = '▶️ Auto-Play';
+                    autoPlayBtn.classList.remove('btn-primary');
+                    autoPlayBtn.classList.add('btn-outline');
+                }
             }
         }
 
