@@ -751,6 +751,156 @@
         "keywords": "detox, cleanse, pseudoscience, liver function, nutrition",
         "ogImage": "/og-images/detox.jpg"
       }
+    },
+    {
+      "id": "crack-knuckles",
+      "slug": "crack-knuckles",
+      "question": "Should I avoid cracking my knuckles?",
+      "shortAnswer": "No",
+      "answer": "No, cracking your knuckles doesn't cause arthritis or joint damage. It's generally harmless, though some people find it annoying.",
+      "description": "Despite the common warning, cracking knuckles does not cause arthritis or harm your joints. The sound comes from gas bubbles bursting in the synovial fluid that lubricates joints. Multiple studies, including one researcher who cracked only his left hand's knuckles for 60 years, found no difference in arthritis rates. However, habitual knuckle cracking may cause temporary hand swelling or reduced grip strength in some people.",
+      "reasoning": "The popping sound occurs when you pull or bend your finger joints, creating negative pressure that causes dissolved gases in the synovial fluid to form bubbles that then collapse. This is a mechanical process that doesn't damage cartilage or bone. The myth about arthritis likely persists because both knuckle cracking and arthritis are common, leading people to incorrectly associate them. True arthritis is caused by cartilage breakdown, inflammation, or other factors unrelated to knuckle cracking.",
+      "scientificBasis": "A 2011 study published in the Journal of the American Board of Family Medicine found no connection between knuckle cracking and hand arthritis. Dr. Donald Unger famously cracked the knuckles of only his left hand for 60 years and won an Ig Nobel Prize for proving no arthritis developed in that hand compared to his uncracked right hand.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["joints", "arthritis", "myth-busting", "habits"],
+      "backgroundImage": "/images/knuckles-bg.jpg",
+      "iconImage": "/icons/hand.svg",
+      "sources": [
+        {
+          "title": "Effect of Habitual Knuckle Cracking on Hand Function",
+          "url": "https://www.jabfm.org/content/24/2/169",
+          "type": "study",
+          "organization": "Journal of the American Board of Family Medicine"
+        }
+      ],
+      "relatedQuestions": ["prevent-arthritis", "joint-health"],
+      "meta": {
+        "title": "Should I avoid cracking my knuckles? - ShouldI",
+        "description": "No need! Learn why knuckle cracking doesn't cause arthritis despite the common myth.",
+        "keywords": "knuckle cracking, arthritis, joint health, myths",
+        "ogImage": "/og-images/knuckles.jpg"
+      }
+    },
+    {
+      "id": "wait-to-swim-after-eating",
+      "slug": "wait-to-swim-after-eating",
+      "question": "Should I wait 30 minutes after eating before swimming?",
+      "shortAnswer": "No",
+      "answer": "No, you don't need to wait after eating to swim. This old rule has no scientific basis.",
+      "description": "The myth that you must wait 30 minutes to an hour after eating before swimming is unfounded. While digestion does divert some blood flow to your stomach, it doesn't significantly reduce blood flow to your muscles enough to cause cramping or drowning. Competitive swimmers often eat before training without problems. The only real concern is that swimming vigorously on a very full stomach might cause minor discomfort, but this is far from dangerous.",
+      "reasoning": "This myth likely originated from the idea that digestion reduces blood flow to muscles, potentially causing cramps. However, your body has more than enough blood to handle both digestion and exercise simultaneously. Muscle cramps while swimming are usually caused by dehydration, overexertion, or poor conditioning—not food in your stomach. The Red Cross and other swimming safety organizations have removed this guidance because there's no evidence supporting it. The real swimming dangers are lack of supervision, exhaustion, and alcohol consumption.",
+      "scientificBasis": "No scientific studies support the claim that eating before swimming increases drowning risk or causes dangerous cramps. The American Red Cross no longer includes waiting after eating in its swimming safety guidelines. Sports medicine research shows athletes can perform safely shortly after eating, though individual comfort varies.",
+      "confidence": "high",
+      "category": "safety",
+      "tags": ["swimming", "digestion", "myth-busting", "exercise"],
+      "backgroundImage": "/images/swimming-bg.jpg",
+      "iconImage": "/icons/swimmer.svg",
+      "sources": [
+        {
+          "title": "Swimming and Eating: Debunking the Myth",
+          "url": "https://www.redcross.org/take-a-class/swimming/swim-safety",
+          "type": "guideline",
+          "organization": "American Red Cross"
+        }
+      ],
+      "relatedQuestions": ["prevent-swimming-cramps", "swim-safely"],
+      "meta": {
+        "title": "Should I wait 30 minutes after eating before swimming? - ShouldI",
+        "description": "No! Learn why this old swimming rule is a myth without scientific support.",
+        "keywords": "swimming after eating, swimming safety, cramps, myths",
+        "ogImage": "/og-images/swimming.jpg"
+      }
+    },
+    {
+      "id": "feed-cold-starve-fever",
+      "slug": "feed-cold-starve-fever",
+      "question": "Should I feed a cold and starve a fever?",
+      "shortAnswer": "No",
+      "answer": "No, you should eat when you're hungry regardless of whether you have a cold or fever. Adequate nutrition and hydration help both conditions.",
+      "description": "The old saying 'feed a cold, starve a fever' has no scientific basis. When you're sick, your body needs adequate nutrition and especially hydration to support your immune system and recovery, whether you have a cold or fever. Forcing yourself to eat when you have no appetite isn't necessary, but deliberately avoiding food when you have a fever is counterproductive. Listen to your body's hunger signals and focus primarily on staying well-hydrated.",
+      "reasoning": "This folk wisdom likely originated from outdated theories about body temperature and metabolism. In reality, both colds and fevers increase your metabolic rate and energy needs. Fever raises body temperature to help fight infection, which requires additional calories. Depriving yourself of food during illness can weaken your immune response. The most important factor is hydration—fever, especially, increases fluid loss through sweating. Appetite naturally decreases during illness, which is normal, but this doesn't mean you should avoid eating when hungry.",
+      "scientificBasis": "Modern medical understanding emphasizes maintaining adequate nutrition and hydration during any illness. Research shows that proper nutrition supports immune function. While one small study suggested different nutritional needs for different types of infections, the evidence is insufficient to recommend eating patterns based on illness type. Medical professionals recommend eating nutritious foods when hungry and prioritizing fluid intake.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["illness", "nutrition", "fever", "immune-system"],
+      "backgroundImage": "/images/cold-fever-bg.jpg",
+      "iconImage": "/icons/thermometer.svg",
+      "sources": [
+        {
+          "title": "Nutrition and Immunity",
+          "url": "https://www.hsph.harvard.edu/nutritionsource/nutrition-and-immunity/",
+          "type": "article",
+          "organization": "Harvard School of Public Health"
+        }
+      ],
+      "relatedQuestions": ["treat-common-cold", "reduce-fever"],
+      "meta": {
+        "title": "Should I feed a cold and starve a fever? - ShouldI",
+        "description": "No! Learn why this old saying is a myth and what you should actually do when sick.",
+        "keywords": "feed a cold, starve a fever, illness, nutrition, myths",
+        "ogImage": "/og-images/cold-fever.jpg"
+      }
+    },
+    {
+      "id": "use-cotton-swabs-clean-ears",
+      "slug": "use-cotton-swabs-clean-ears",
+      "question": "Should I use cotton swabs to clean inside my ears?",
+      "shortAnswer": "No",
+      "answer": "No, you should not put cotton swabs or any objects inside your ear canal. Your ears are self-cleaning.",
+      "description": "Despite being commonly used for ear cleaning, cotton swabs can push earwax deeper into the ear canal, potentially causing impaction, infection, or damage to the eardrum. Ears are self-cleaning—earwax naturally migrates outward, carrying debris with it. The only cleaning needed is wiping the outer ear with a washcloth. Inserting objects into the ear canal risks injury and interferes with the ear's natural cleaning process. If you have excessive earwax buildup, see a doctor for safe removal.",
+      "reasoning": "Earwax (cerumen) is not dirty—it's a protective substance that traps dust and debris while moisturizing the ear canal. The ear canal has tiny hairs and a self-cleaning mechanism that moves wax outward. Cotton swabs push wax back toward the eardrum, where it can accumulate and harden, potentially causing hearing loss, pain, or infection. They can also scratch the ear canal or puncture the eardrum. The satisfying feeling of using cotton swabs actually comes from stimulating nerves, not from necessary cleaning.",
+      "scientificBasis": "The American Academy of Otolaryngology explicitly warns against inserting cotton swabs into ear canals. Studies show that cotton swab use is a leading cause of ear injuries and earwax impaction. Medical guidelines recommend leaving ear canals alone unless a doctor identifies a problem requiring treatment.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["ear-health", "hygiene", "injury-prevention", "safety"],
+      "backgroundImage": "/images/ear-cleaning-bg.jpg",
+      "iconImage": "/icons/ear.svg",
+      "sources": [
+        {
+          "title": "Earwax and Care",
+          "url": "https://www.enthealth.org/conditions/earwax-cerumen-impaction/",
+          "type": "guideline",
+          "organization": "American Academy of Otolaryngology"
+        }
+      ],
+      "relatedQuestions": ["remove-earwax-safely", "when-see-doctor-ear"],
+      "meta": {
+        "title": "Should I use cotton swabs to clean inside my ears? - ShouldI",
+        "description": "No! Learn why putting cotton swabs in your ears is harmful and why ears are self-cleaning.",
+        "keywords": "cotton swabs, ear cleaning, earwax, ear health, Q-tips",
+        "ogImage": "/og-images/ear-cleaning.jpg"
+      }
+    },
+    {
+      "id": "refrigerate-all-medications",
+      "slug": "refrigerate-all-medications",
+      "question": "Should I refrigerate my medications?",
+      "shortAnswer": "No",
+      "answer": "No, most medications should be stored at room temperature. Only refrigerate medications that specifically require it.",
+      "description": "Most medications should be stored at room temperature in a cool, dry place—not in the bathroom medicine cabinet where heat and humidity can degrade them. Only certain medications like insulin, some liquid antibiotics, and specific biologics require refrigeration, and these will have clear storage instructions on the label. Refrigerating medications that should be kept at room temperature can actually damage them. Always check the label or package insert for proper storage instructions.",
+      "reasoning": "Medications are formulated and tested for stability at specific temperatures. Room temperature medications stored in the refrigerator may experience condensation, changes in consistency, or chemical alterations that reduce effectiveness. The bathroom, despite being the traditional location for medicine storage, is actually one of the worst places due to heat and humidity from showers. The best storage location for most medications is a cool, dry place away from direct sunlight, such as a bedroom drawer or kitchen cabinet away from the stove.",
+      "scientificBasis": "The FDA requires specific storage instructions for all medications based on stability testing. Pharmaceutical research demonstrates that improper storage can degrade medications, reducing effectiveness or creating harmful breakdown products. Storage guidelines are evidence-based and should be followed as indicated on medication packaging.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["medication", "storage", "safety", "pharmacy"],
+      "backgroundImage": "/images/medication-bg.jpg",
+      "iconImage": "/icons/pill-bottle.svg",
+      "sources": [
+        {
+          "title": "Storing Your Medicines",
+          "url": "https://www.fda.gov/drugs/safe-disposal-medicines/where-and-how-dispose-unused-medicines",
+          "type": "guideline",
+          "organization": "Food and Drug Administration"
+        }
+      ],
+      "relatedQuestions": ["store-medication-safely", "check-medication-expiration"],
+      "meta": {
+        "title": "Should I refrigerate my medications? - ShouldI",
+        "description": "No, not most! Learn proper medication storage and why refrigeration isn't necessary for most drugs.",
+        "keywords": "medication storage, refrigerate medicine, pharmacy, drug safety",
+        "ogImage": "/og-images/medication.jpg"
+      }
     }
   ]
 }
