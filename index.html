@@ -375,7 +375,7 @@
         // Initialize the app
         async function init() {
             try {
-                const response = await fetch('https://ishouldnot.github.io/questions.json');
+                const response = await fetch('questions.json');
                 questionsData = await response.json();
                 displayQuestion();
             } catch (error) {
