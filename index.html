@@ -374,6 +374,8 @@
         // Questions data (in production, this would be loaded from questions.json)
         let questionsData = null;
         let currentQuestion = null;
+        let autoPlayInterval = null;
+        let isAutoPlaying = false;
 
         // Initialize the app
         async function init() {
@@ -494,6 +496,9 @@
                         <button class="btn btn-primary" onclick="loadRandomQuestion()">
                             🎲 Random Question
                         </button>
+                        <button class="btn btn-outline btn-auto-play" onclick="toggleAutoPlay()">
+                            ▶️ Auto-Play
+                        </button>
                         <button class="btn btn-secondary" onclick="shareQuestion()">
                             📤 Share This
                         </button>
@@ -531,6 +536,46 @@
         function loadRandomQuestion() {
             const question = getRandomQuestion();
             window.location.hash = question.slug;
+        }
+
+        // Toggle auto-play
+        function toggleAutoPlay() {
+            if (isAutoPlaying) {
+                stopAutoPlay();
+            } else {
+                startAutoPlay();
+            }
+        }
+
+        // Start auto-play
+        function startAutoPlay() {
+            isAutoPlaying = true;
+            const autoPlayBtn = document.querySelector('.btn-auto-play');
+            if (autoPlayBtn) {
+                autoPlayBtn.textContent = '⏸️ Stop Auto-Play';
+                autoPlayBtn.classList.remove('btn-outline');
+                autoPlayBtn.classList.add('btn-primary');
+            }
+            
+            autoPlayInterval = setInterval(() => {
+                loadRandomQuestion();
+            }, 5000);
+        }
+
+        // Stop auto-play
+        function stopAutoPlay() {
+            isAutoPlaying = false;
+            const autoPlayBtn = document.querySelector('.btn-auto-play');
+            if (autoPlayBtn) {
+                autoPlayBtn.textContent = '▶️ Auto-Play';
+                autoPlayBtn.classList.remove('btn-primary');
+                autoPlayBtn.classList.add('btn-outline');
+            }
+            
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+            }
         }
 
         // Share question
