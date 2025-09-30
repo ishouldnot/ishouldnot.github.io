@@ -901,6 +901,156 @@
         "keywords": "medication storage, refrigerate medicine, pharmacy, drug safety",
         "ogImage": "/og-images/medication.jpg"
       }
+    },
+    {
+      "id": "double-dip-food",
+      "slug": "double-dip-food",
+      "question": "Should I avoid double-dipping chips in shared dip?",
+      "shortAnswer": "Yes",
+      "answer": "Yes, double-dipping does transfer bacteria from your mouth to the shared dip, potentially spreading germs to others.",
+      "description": "When you take a bite of a chip or vegetable and then dip it again into shared dip, you transfer bacteria from your mouth into the communal bowl. Studies have shown that double-dipping transfers thousands of bacteria per dip. While healthy people's immune systems can typically handle these bacteria, double-dipping can spread illnesses like colds, flu, and foodborne pathogens. It's a genuine hygiene concern, not just etiquette. Use fresh chips for each dip, or put dip on your plate instead.",
+      "reasoning": "Your mouth contains millions of bacteria, and saliva coats food when you bite it. When that food goes back into shared dip, bacteria transfer into the bowl where they can multiply, especially in room-temperature foods. The amount of bacteria transferred depends on the dip's consistency—thicker dips like salsa pick up more bacteria than thin dips. While most mouth bacteria are harmless to you, you may be carrying contagious viruses or bacteria that can make others sick. This is particularly concerning if someone is immunocompromised or very young or elderly.",
+      "scientificBasis": "Research published in the Journal of Food Safety found that double-dipping transferred approximately 10,000 bacteria from the eater's mouth to the remaining dip. The study demonstrated significant bacterial transfer with each double-dip, with variation based on dip consistency. Microbiologists confirm this is a real contamination risk, not just a social faux pas.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["food-safety", "hygiene", "disease-prevention", "bacteria"],
+      "backgroundImage": "/images/double-dip-bg.jpg",
+      "iconImage": "/icons/chip-dip.svg",
+      "sources": [
+        {
+          "title": "Food Safety Study on Double-Dipping",
+          "url": "https://www.clemson.edu/cafls/departments/food_science/research/featured-research/double-dipping.html",
+          "type": "study",
+          "organization": "Clemson University"
+        }
+      ],
+      "relatedQuestions": ["prevent-food-poisoning", "food-safety-parties"],
+      "meta": {
+        "title": "Should I avoid double-dipping chips in shared dip? - ShouldI",
+        "description": "Yes! Learn how double-dipping transfers bacteria and why it's a real hygiene concern.",
+        "keywords": "double dipping, food safety, bacteria, hygiene, party food",
+        "ogImage": "/og-images/double-dip.jpg"
+      }
+    },
+    {
+      "id": "microwave-destroy-nutrients",
+      "slug": "microwave-destroy-nutrients",
+      "question": "Does microwaving food destroy its nutrients?",
+      "shortAnswer": "No",
+      "answer": "No, microwaving food doesn't destroy nutrients any more than other cooking methods—often it preserves them better.",
+      "description": "Microwaving is actually one of the best cooking methods for preserving nutrients. Because microwave cooking is faster and often uses less water than boiling or steaming, fewer vitamins and minerals are lost. All cooking methods cause some nutrient loss, but microwaving typically causes less than boiling, frying, or roasting. The key factors affecting nutrient retention are cooking time, temperature, and water exposure—not the cooking method itself.",
+      "reasoning": "Vitamins, especially water-soluble ones like vitamin C and B vitamins, break down when exposed to heat, water, and air. Microwaving is efficient because it heats food quickly with minimal water, reducing the time nutrients are exposed to destructive conditions. Boiling vegetables causes nutrients to leach into the water, which is often discarded. Microwaving vegetables with little or no water retains more nutrients. The myth about microwaves destroying nutrients likely stems from general fear of microwave radiation, which is non-ionizing and doesn't make food radioactive or change its molecular structure in harmful ways.",
+      "scientificBasis": "Studies comparing cooking methods consistently show that microwaving preserves nutrients as well as or better than conventional methods. Research published in the Journal of Food Science found that microwaved vegetables retained more vitamins than boiled vegetables. The Harvard School of Public Health confirms that microwaving is a healthy cooking method that preserves nutrients effectively.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["nutrition", "cooking", "food-safety", "myth-busting"],
+      "backgroundImage": "/images/microwave-nutrients-bg.jpg",
+      "iconImage": "/icons/microwave-food.svg",
+      "sources": [
+        {
+          "title": "Microwave Cooking and Nutrition",
+          "url": "https://www.health.harvard.edu/staying-healthy/microwave-cooking-and-nutrition",
+          "type": "article",
+          "organization": "Harvard Health Publishing"
+        }
+      ],
+      "relatedQuestions": ["best-cooking-methods", "preserve-food-nutrients"],
+      "meta": {
+        "title": "Does microwaving food destroy its nutrients? - ShouldI",
+        "description": "No! Learn why microwaving actually preserves nutrients better than many other cooking methods.",
+        "keywords": "microwave, nutrients, cooking methods, food science, vitamins",
+        "ogImage": "/og-images/microwave-nutrients.jpg"
+      }
+    },
+    {
+      "id": "read-in-dim-light",
+      "slug": "read-in-dim-light",
+      "question": "Should I avoid reading in dim light?",
+      "shortAnswer": "No",
+      "answer": "No, reading in dim light doesn't damage your eyes, though it can cause temporary eye strain and fatigue.",
+      "description": "The common warning that reading in dim light ruins your eyesight is a myth. While low light makes your eyes work harder and can cause temporary discomfort, headaches, or difficulty focusing, it doesn't cause permanent damage to your vision. Your eyes may feel tired or strained, but this goes away with rest. However, adequate lighting does make reading more comfortable and reduces fatigue, so good lighting is still recommended for prolonged reading.",
+      "reasoning": "In dim light, your pupils dilate to let in more light, and your eye muscles work harder to focus. This extra effort can cause fatigue, similar to how any muscle gets tired from extended use. The discomfort is temporary and doesn't harm the eye's structure or cause lasting vision problems. This myth likely persists because people often notice vision problems around the same time they're doing more reading (like during school years), leading to false correlation. Additionally, eye strain symptoms can be concerning, making people assume damage is occurring when it's just fatigue.",
+      "scientificBasis": "Ophthalmologists and vision scientists consistently state that reading in dim light doesn't damage eyes. The American Academy of Ophthalmology explicitly debunks this myth. While eye strain is real and uncomfortable, it's a temporary condition that resolves with rest and doesn't lead to vision deterioration or eye disease.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["vision", "eye-health", "myth-busting", "reading"],
+      "backgroundImage": "/images/reading-light-bg.jpg",
+      "iconImage": "/icons/book-light.svg",
+      "sources": [
+        {
+          "title": "Are There Dangers With Reading In Dim Light?",
+          "url": "https://www.aao.org/eye-health/tips-prevention/myths",
+          "type": "guideline",
+          "organization": "American Academy of Ophthalmology"
+        }
+      ],
+      "relatedQuestions": ["prevent-eye-strain", "protect-vision"],
+      "meta": {
+        "title": "Should I avoid reading in dim light? - ShouldI",
+        "description": "No harm done! Learn why reading in dim light doesn't damage your eyes despite causing temporary strain.",
+        "keywords": "reading in dim light, eye health, vision myths, eye strain",
+        "ogImage": "/og-images/reading-light.jpg"
+      }
+    },
+    {
+      "id": "shave-hair-grow-thicker",
+      "slug": "shave-hair-grow-thicker",
+      "question": "Does shaving make hair grow back thicker?",
+      "shortAnswer": "No",
+      "answer": "No, shaving doesn't change hair thickness, color, or growth rate. This is a persistent myth with no scientific basis.",
+      "description": "Shaving cuts hair at the skin's surface but doesn't affect the follicle beneath the skin where hair growth occurs. Hair appears thicker after shaving only because you're seeing the blunt end of the hair shaft rather than the naturally tapered tip. The hair may also feel coarser temporarily because short stubble is more noticeable than longer hair. Shaving has no effect on hair color, thickness, or growth rate—these are determined by genetics and hormones, not by cutting the hair shaft.",
+      "reasoning": "Hair grows from follicles located beneath the skin surface. When you shave, you're cutting the hair shaft above the skin, which has no biological connection to the living part of the hair in the follicle. The follicle determines hair characteristics like thickness, color, and growth rate. The myth likely persists because freshly shaved hair is more noticeable—the blunt tip feels rough, and short dark hair contrasts more with skin. As hair grows longer, it tapers naturally and becomes less noticeable. Additionally, people often start shaving during puberty when hormones are naturally causing hair to become thicker and darker, creating false correlation.",
+      "scientificBasis": "Dermatological research has repeatedly demonstrated that shaving doesn't alter hair structure or growth. Clinical studies measuring hair before and after shaving show no changes in thickness, growth rate, or color. The myth has been thoroughly debunked by dermatologists and hair growth researchers.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["hair", "grooming", "myth-busting", "dermatology"],
+      "backgroundImage": "/images/shaving-bg.jpg",
+      "iconImage": "/icons/razor.svg",
+      "sources": [
+        {
+          "title": "Shaving and Hair Growth Myths",
+          "url": "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427",
+          "type": "article",
+          "organization": "Mayo Clinic"
+        }
+      ],
+      "relatedQuestions": ["hair-growth-methods", "grooming-myths"],
+      "meta": {
+        "title": "Does shaving make hair grow back thicker? - ShouldI",
+        "description": "No! Learn why this common belief is a myth and what actually determines hair thickness.",
+        "keywords": "shaving, hair growth, grooming myths, hair thickness",
+        "ogImage": "/og-images/shaving.jpg"
+      }
+    },
+    {
+      "id": "wear-hat-lose-heat",
+      "slug": "wear-hat-lose-heat",
+      "question": "Do I lose most of my body heat through my head?",
+      "shortAnswer": "No",
+      "answer": "No, you don't lose more heat through your head than other uncovered parts of your body. This is a myth.",
+      "description": "The claim that you lose 40-50% of body heat through your head is false. Your head accounts for about 10% of your body's surface area and loses about 10% of your body heat—proportional to its size. You lose heat through any exposed skin. The myth likely originated from a flawed military study where subjects wore cold-weather gear but no hats. Of course they lost heat through their heads—it was the only exposed area. Wearing a hat in cold weather is still smart, but only because covering exposed skin prevents heat loss, not because your head is special.",
+      "reasoning": "Heat loss occurs through radiation, convection, and evaporation from exposed skin. Your head loses heat at about the same rate per square inch as any other part of your body. The head may feel more sensitive to cold because it has many nerve endings and because we rarely cover it compared to other body parts. In cold weather, your body prioritizes maintaining core temperature and blood flow to vital organs. Blood vessels in extremities constrict to reduce heat loss, which is why fingers and toes get cold first. Your head, containing your brain, maintains strong blood flow, which can make it feel warmer and may contribute to the myth.",
+      "scientificBasis": "Thermal physiology research shows that heat loss is proportional to surface area. Studies measuring heat loss from different body parts found no special heat-loss properties of the head. The myth has been debunked by physiologists and thermal regulation experts. While wearing a hat in cold weather is advisable, it's for general warmth, not because of disproportionate heat loss.",
+      "confidence": "high",
+      "category": "health",
+      "tags": ["body-temperature", "cold-weather", "myth-busting", "physiology"],
+      "backgroundImage": "/images/hat-warmth-bg.jpg",
+      "iconImage": "/icons/winter-hat.svg",
+      "sources": [
+        {
+          "title": "Body Heat Loss and Temperature Regulation",
+          "url": "https://www.bmj.com/content/337/bmj.a2769",
+          "type": "article",
+          "organization": "British Medical Journal"
+        }
+      ],
+      "relatedQuestions": ["stay-warm-winter", "prevent-hypothermia"],
+      "meta": {
+        "title": "Do I lose most of my body heat through my head? - ShouldI",
+        "description": "No! Learn why this common belief is a myth and how your body actually loses heat.",
+        "keywords": "body heat, head, cold weather, myths, hypothermia",
+        "ogImage": "/og-images/hat-warmth.jpg"
+      }
     }
   ]
 }
