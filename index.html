@@ -4,635 +4,844 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Should I? - Science-Based Answers</title>
-    <meta name="description" content="Get clear, science-based answers to everyday questions.">
+    <meta name="description" content="Clear, science-based answers to everyday questions about health, safety, food, technology, and the environment, with sources.">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://ishouldnot.github.io/">
+    <meta property="og:site_name" content="Should I?">
     <meta property="og:title" content="Should I? - Science-Based Answers">
-    <meta property="og:description" content="Get clear, science-based answers to everyday questions.">
-    <meta property="og:image" content="/og-images/default.jpg">
+    <meta property="og:description" content="Clear, science-based answers to everyday questions, with sources.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ishouldnot.github.io/">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%94%3C/text%3E%3C/svg%3E">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg-1: #667eea;
+            --bg-2: #764ba2;
+            --surface: #ffffff;
+            --surface-2: #f3f4f6;
+            --surface-3: #f9fafb;
+            --text: #1f2937;
+            --text-2: #374151;
+            --text-3: #4b5563;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --accent: #5a67d8;
+            --accent-hover: #4c51bf;
+            --yes: #059669;
+            --no: #dc2626;
+            --depends: #d97706;
+            --why-bg: #fef3c7; --why-border: #f59e0b; --why-title: #92400e;
+            --sci-bg: #dbeafe; --sci-border: #3b82f6; --sci-title: #1e40af;
+            --exc-bg: #f3e8ff; --exc-border: #9333ea; --exc-title: #6b21a8;
+            --shadow: 0 20px 60px rgba(0,0,0,0.3);
+            color-scheme: light;
         }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-1: #2d3266;
+                --bg-2: #3b2452;
+                --surface: #1b1d2a;
+                --surface-2: #252838;
+                --surface-3: #212433;
+                --text: #f3f4f6;
+                --text-2: #e5e7eb;
+                --text-3: #d1d5db;
+                --muted: #9ca3af;
+                --border: #374151;
+                --accent: #a3b1ff;
+                --accent-hover: #c3ccff;
+                --why-bg: #3a2f12; --why-border: #f59e0b; --why-title: #fcd34d;
+                --sci-bg: #172a4a; --sci-border: #60a5fa; --sci-title: #93c5fd;
+                --exc-bg: #2e1c45; --exc-border: #c084fc; --exc-title: #e9d5ff;
+                --shadow: 0 20px 60px rgba(0,0,0,0.5);
+                color-scheme: dark;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { background: var(--bg-2); }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text);
+            background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
             min-height: 100vh;
             padding: 20px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .container { max-width: 800px; margin: 0 auto; }
 
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-            padding: 20px 0;
-            cursor: pointer;
+        .skip-link {
+            position: absolute; left: -9999px; top: 10px;
+            background: #fff; color: #1f2937; padding: 8px 14px; border-radius: 6px; z-index: 1001;
         }
+        .skip-link:focus { left: 10px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+        :focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+
+        header { text-align: center; color: white; margin-bottom: 28px; padding: 20px 0 0; }
+        .site-title {
+            font-size: 3em; font-weight: 800; line-height: 1.15;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: inherit; text-decoration: none; display: inline-block; margin-bottom: 8px;
         }
+        header p { font-size: 1.2em; opacity: 0.92; }
 
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+        .toolbar {
+            display: flex; gap: 10px; margin-top: 22px; align-items: stretch; position: relative;
         }
+        .search-wrap { flex: 1; position: relative; }
+        .search-input {
+            width: 100%; padding: 13px 16px; font-size: 1em; border-radius: 10px;
+            border: 2px solid transparent; background: var(--surface); color: var(--text);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        .search-input:focus { border-color: #fbbf24; outline: none; }
+        .search-results {
+            position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 50;
+            background: var(--surface); border-radius: 10px; box-shadow: var(--shadow);
+            list-style: none; text-align: left; overflow: hidden; max-height: 60vh; overflow-y: auto;
+        }
+        .search-results[hidden] { display: none; }
+        .search-results li a {
+            display: flex; gap: 10px; align-items: center; padding: 11px 16px;
+            color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border);
+        }
+        .search-results li:last-child a { border-bottom: none; }
+        .search-results li a[aria-selected="true"], .search-results li a:hover { background: var(--surface-2); }
+        .search-empty { padding: 12px 16px; color: var(--muted); }
+
+        .header-btn {
+            padding: 0 18px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.12); color: white; font-weight: 600; font-size: 1em;
+            cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; white-space: nowrap;
+        }
+        .header-btn:hover { background: rgba(255,255,255,0.25); }
 
         .card {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            padding: 40px;
-            margin-bottom: 30px;
-            animation: fadeIn 0.5s ease-in;
+            background: var(--surface); border-radius: 20px; box-shadow: var(--shadow);
+            padding: 40px; margin-bottom: 30px;
+        }
+        .card.enter { animation: fadeIn 0.35s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .category-label {
+            display: block; text-align: center; color: var(--muted); font-size: 0.95em; margin-bottom: 8px;
+        }
+        .category-label a { color: inherit; }
+
+        .question {
+            font-size: 2em; font-weight: bold; color: var(--text);
+            margin-bottom: 20px; text-align: center; line-height: 1.3;
         }
 
         .answer-badge {
-            display: block;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-align: center;
+            display: block; padding: 10px 25px; border-radius: 50px; font-size: 1.5em;
+            font-weight: bold; margin-bottom: 20px; text-transform: uppercase; text-align: center; color: white;
         }
+        .answer-badge.yes { background: var(--yes); }
+        .answer-badge.no { background: var(--no); }
+        .answer-badge.depends { background: var(--depends); }
 
-        .answer-badge.yes {
-            background: #10b981;
-            color: white;
+        .mini-badge {
+            flex: none; font-size: 0.75em; font-weight: 700; color: white; border-radius: 999px;
+            padding: 2px 10px; min-width: 4.5em; text-align: center;
         }
-
-        .answer-badge.no {
-            background: #ef4444;
-            color: white;
-        }
-
-        .question {
-            font-size: 2em;
-            font-weight: bold;
-            color: #1f2937;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+        .mini-badge.yes { background: var(--yes); }
+        .mini-badge.no { background: var(--no); }
+        .mini-badge.depends { background: var(--depends); }
 
         .answer {
-            font-size: 1.3em;
-            color: #4b5563;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f3f4f6;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+            font-size: 1.3em; color: var(--text-3); margin-bottom: 30px; padding: 20px;
+            background: var(--surface-2); border-radius: 10px; border-left: 4px solid var(--accent);
         }
+        .description { font-size: 1.1em; color: var(--text-2); margin-bottom: 20px; line-height: 1.8; }
 
-        .description {
-            font-size: 1.1em;
-            color: #374151;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
+        .panel { padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid; }
+        .panel h3 { margin-bottom: 10px; font-size: 1.1em; }
+        .panel.why { background: var(--why-bg); border-color: var(--why-border); }
+        .panel.why h3 { color: var(--why-title); }
+        .panel.sci { background: var(--sci-bg); border-color: var(--sci-border); }
+        .panel.sci h3 { color: var(--sci-title); }
+        .panel.exc { background: var(--exc-bg); border-color: var(--exc-border); }
+        .panel.exc h3 { color: var(--exc-title); }
 
-        .reasoning {
-            background: #fef3c7;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #f59e0b;
-        }
-
-        .reasoning h3 {
-            color: #92400e;
-            margin-bottom: 10px;
-        }
-
-        .scientific-basis {
-            background: #dbeafe;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #3b82f6;
-        }
-
-        .scientific-basis h3 {
-            color: #1e40af;
-            margin-bottom: 10px;
-        }
-
+        .meta-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
         .confidence {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-bottom: 20px;
+            display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.9em;
+            font-weight: bold; color: white;
         }
+        .confidence.high { background: var(--yes); }
+        .confidence.medium { background: var(--depends); }
+        .confidence.low { background: var(--no); }
+        .reviewed { color: var(--muted); font-size: 0.9em; }
 
-        .confidence.high {
-            background: #10b981;
-            color: white;
-        }
-
-        .confidence.medium {
-            background: #f59e0b;
-            color: white;
-        }
-
-        .confidence.low {
-            background: #ef4444;
-            color: white;
-        }
-
-        .sources {
-            margin: 30px 0;
-        }
-
-        .sources h3 {
-            color: #1f2937;
-            margin-bottom: 15px;
-        }
-
+        .sources { margin: 30px 0; }
+        .sources h3, .related-questions h3 { color: var(--text); margin-bottom: 15px; }
         .source-item {
-            background: #f9fafb;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-left: 3px solid #667eea;
+            background: var(--surface-3); padding: 15px; border-radius: 8px; margin-bottom: 10px;
+            border-left: 3px solid var(--accent);
         }
+        .source-item a { color: var(--accent); text-decoration: none; font-weight: 600; word-break: break-word; }
+        .source-item a:hover { text-decoration: underline; }
+        .source-org { color: var(--muted); font-size: 0.9em; margin-top: 5px; }
 
-        .source-item a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .source-item a:hover {
-            text-decoration: underline;
-        }
-
-        .source-org {
-            color: #6b7280;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-
-        .tags {
-            margin: 20px 0;
-        }
-
+        .tags { margin: 20px 0; }
         .tag {
-            display: inline-block;
-            background: #e5e7eb;
-            color: #4b5563;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            margin: 5px 5px 5px 0;
+            display: inline-block; background: var(--surface-2); color: var(--text-3); padding: 5px 15px;
+            border-radius: 15px; font-size: 0.9em; margin: 5px 5px 5px 0; text-decoration: none;
+            border: 1px solid var(--border); cursor: pointer; font-family: inherit;
         }
+        .tag:hover, .tag[aria-pressed="true"] { background: var(--accent); color: white; border-color: var(--accent); }
 
-        .actions {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
+        .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
         .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            padding: 12px 24px; border: 2px solid transparent; border-radius: 8px; font-size: 1em;
+            font-weight: 600; cursor: pointer; transition: background 0.2s ease, color 0.2s ease;
+            text-decoration: none; display: inline-block; font-family: inherit;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-secondary { background: var(--yes); color: white; }
+        .btn-secondary:hover { filter: brightness(1.1); }
+        .btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+        .btn-outline:hover { background: var(--accent); color: white; }
+        @media (prefers-color-scheme: dark) {
+            .btn-primary, .btn-outline:hover { color: #1b1d2a; }
         }
 
-        .btn-primary {
-            background: #667eea;
-            color: white;
-        }
+        .pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 16px; }
+        .pager .btn { flex: 1; text-align: center; }
 
-        .btn-primary:hover {
-            background: #5568d3;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: #10b981;
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: #059669;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
-        }
-
-        .btn-outline {
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-
-        .btn-outline:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .related-questions {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid #e5e7eb;
-        }
-
-        .related-questions h3 {
-            color: #1f2937;
-            margin-bottom: 15px;
-        }
-
+        .related-questions { margin-top: 30px; padding-top: 30px; border-top: 2px solid var(--border); }
         .related-link {
-            display: block;
-            padding: 12px 20px;
-            background: #f3f4f6;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            display: flex; gap: 12px; align-items: center; padding: 12px 20px; background: var(--surface-2);
+            border-radius: 8px; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: 600;
+            transition: background 0.2s ease, color 0.2s ease;
         }
+        .related-link:hover { background: var(--accent); color: white; }
+        @media (prefers-color-scheme: dark) { .related-link:hover { color: #1b1d2a; } }
 
-        .related-link:hover {
-            background: #667eea;
-            color: white;
-            transform: translateX(5px);
+        /* Browse view */
+        .browse-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+        .browse-head h2 { font-size: 1.6em; }
+        .browse-count { color: var(--muted); }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .browse-group { margin-bottom: 26px; }
+        .browse-group h3 { font-size: 1.15em; margin-bottom: 10px; color: var(--text); }
+        .browse-list { list-style: none; }
+        .browse-list a {
+            display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 8px;
+            color: var(--text); text-decoration: none;
         }
+        .browse-list a:hover { background: var(--surface-2); }
 
         .toast {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #1f2937;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 0.3s ease;
-            z-index: 1000;
+            position: fixed; bottom: 30px; right: 30px; background: #1f2937; color: white;
+            padding: 15px 25px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            opacity: 0; transform: translateY(100px); transition: all 0.3s ease; z-index: 1000; pointer-events: none;
         }
+        .toast.show { opacity: 1; transform: translateY(0); }
 
-        .toast.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .loading { text-align: center; color: white; font-size: 1.5em; padding: 50px; }
 
-        .loading {
-            text-align: center;
-            color: white;
-            font-size: 1.5em;
-            padding: 50px;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            margin-top: 50px;
-            padding: 20px;
-            opacity: 0.8;
+        footer { text-align: center; color: white; margin-top: 40px; padding: 20px; opacity: 0.9; font-size: 0.95em; }
+        footer p + p { margin-top: 6px; }
+        footer a { color: white; }
+        .disclaimer { max-width: 620px; margin: 0 auto 10px; }
+        .shortcuts { opacity: 0.8; font-size: 0.9em; }
+        kbd {
+            background: rgba(255,255,255,0.2); border-radius: 4px; padding: 1px 6px; font-family: inherit; font-size: 0.9em;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
+            body { padding: 14px; }
+            .site-title { font-size: 2.2em; }
+            header p { font-size: 1.05em; }
+            .question { font-size: 1.5em; }
+            .card { padding: 24px; }
+            .actions { flex-direction: column; }
+            .btn { width: 100%; text-align: center; }
+            .toolbar { flex-wrap: wrap; }
+            .search-wrap { flex-basis: 100%; }
+            .header-btn { flex: 1; justify-content: center; padding: 10px; }
+            .shortcuts { display: none; }
+            .toast { left: 14px; right: 14px; bottom: 14px; text-align: center; }
+        }
 
-            .question {
-                font-size: 1.5em;
-            }
-
-            .card {
-                padding: 25px;
-            }
-
-            .actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
         }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#app">Skip to content</a>
     <div class="container">
-        <header onclick="loadRandomQuestion()">
-            <h1>Should I?</h1>
+        <header>
+            <a class="site-title" href="#" id="home-link" title="Show a random question">Should I?</a>
             <p>Clear, science-based answers to everyday questions</p>
+            <div class="toolbar">
+                <div class="search-wrap" role="search">
+                    <label for="search" class="sr-only">Search questions</label>
+                    <input id="search" class="search-input" type="search" placeholder="Search questions, e.g. sunscreen, passwords..."
+                           autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
+                    <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+                </div>
+                <a class="header-btn" href="#browse">Browse all</a>
+                <button class="header-btn" type="button" id="random-btn">Random</button>
+            </div>
         </header>
 
-        <div id="app">
+        <main id="app" tabindex="-1" aria-live="polite">
             <div class="loading">Loading questions...</div>
-        </div>
+        </main>
+        <noscript>
+            <div class="card"><p>This site needs JavaScript to show answers. You can read the raw data in <a href="questions.json">questions.json</a>.</p></div>
+        </noscript>
 
         <footer>
-            <p>All answers are based on current scientific evidence and expert guidelines.</p>
-            <p>Made with ❤️ for informed decision making</p>
+            <p class="disclaimer">General information based on current scientific evidence and expert guidelines. Not a substitute for advice from a doctor or other qualified professional about your own situation.</p>
+            <p id="footer-stats"></p>
+            <p class="shortcuts">Shortcuts: <kbd>/</kbd> search, <kbd>R</kbd> random, <kbd>&larr;</kbd> <kbd>&rarr;</kbd> previous / next, <kbd>B</kbd> browse</p>
+            <p><a href="https://github.com/ishouldnot/ishouldnot.github.io" rel="noopener">Source on GitHub</a> &middot; Made with ❤️ for informed decision making</p>
         </footer>
     </div>
 
-    <div id="toast" class="toast"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
     <script>
-        // Questions data (in production, this would be loaded from questions.json)
-        let questionsData = null;
-        let currentQuestion = null;
-        let autoPlayInterval = null;
-        let isAutoPlaying = false;
+    (function () {
+        'use strict';
 
-        // Initialize the app
+        const AUTO_PLAY_MS = 8000;
+        const CATEGORY_LABELS = {
+            'health': 'Health',
+            'food': 'Food & kitchen',
+            'first-aid': 'First aid',
+            'safety': 'Safety',
+            'technology': 'Technology',
+            'environment': 'Environment'
+        };
+        const SITE_TITLE = 'Should I? - Science-Based Answers';
+        const SITE_DESC = document.querySelector('meta[name="description"]').content;
+
+        let data = null;          // full dataset
+        let questions = [];       // array of questions
+        let bySlug = new Map();
+        let currentQuestion = null;
+        let autoPlayTimer = null;
+        let isAutoPlaying = false;
+        let browseFilter = { category: 'all', tag: null };
+        let searchIndex = [];
+        let activeResult = -1;
+
+        const $app = document.getElementById('app');
+        const $search = document.getElementById('search');
+        const $results = document.getElementById('search-results');
+
+        // ---------- helpers ----------
+        function esc(value) {
+            return String(value == null ? '' : value)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        function safeUrl(url) {
+            try {
+                const u = new URL(url, location.href);
+                return (u.protocol === 'https:' || u.protocol === 'http:') ? u.href : '#';
+            } catch (e) { return '#'; }
+        }
+        function answerClass(q) {
+            const c = String(q.shortAnswer || '').toLowerCase();
+            return ['yes', 'no', 'depends'].includes(c) ? c : 'depends';
+        }
+        function categoryLabel(c) { return CATEGORY_LABELS[c] || (c ? c.charAt(0).toUpperCase() + c.slice(1) : 'Other'); }
+        function formatDate(iso) {
+            if (!iso) return '';
+            const d = new Date(iso + 'T00:00:00');
+            return isNaN(d) ? iso : d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+        function currentSlug() {
+            try { return decodeURIComponent(location.hash.slice(1)); } catch (e) { return location.hash.slice(1); }
+        }
+
+        // ---------- init ----------
         async function init() {
             try {
-                const response = await fetch('questions.json');
-                questionsData = await response.json();
-                displayQuestion();
-            } catch (error) {
-                console.error('Error loading questions:', error);
-                document.getElementById('app').innerHTML = '<div class="card"><p>Error loading questions. Please refresh the page.</p></div>';
+                const res = await fetch('questions.json', { cache: 'no-cache' });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                data = await res.json();
+                questions = (data.questions || []).filter(q => q && q.slug && q.question);
+                if (!questions.length) throw new Error('No questions in data');
+                bySlug = new Map(questions.map(q => [q.slug, q]));
+                buildSearchIndex();
+                renderFooterStats();
+                route();
+            } catch (err) {
+                console.error('Error loading questions:', err);
+                $app.innerHTML = '<div class="card"><h2 class="question">Couldn\'t load questions</h2>' +
+                    '<p class="description">The question list didn\'t load. Check your connection and reload the page.</p>' +
+                    '<div class="actions"><button class="btn btn-primary" type="button" onclick="location.reload()">Reload page</button></div></div>';
             }
         }
 
-        // Get question from URL hash
-        function getQuestionFromURL() {
-            const hash = window.location.hash.substring(1);
-            if (hash && questionsData) {
-                return questionsData.questions.find(q => q.slug === hash);
-            }
-            return null;
+        function renderFooterStats() {
+            const el = document.getElementById('footer-stats');
+            el.textContent = questions.length + ' questions' + (data.lastUpdated ? ', last updated ' + formatDate(data.lastUpdated) : '') + '.';
         }
 
-        // Get random question
-        function getRandomQuestion() {
-            const randomIndex = Math.floor(Math.random() * questionsData.questions.length);
-            return questionsData.questions[randomIndex];
+        // ---------- routing ----------
+        function route() {
+            const slug = currentSlug();
+            if (slug === 'browse') {
+                stopAutoPlay();
+                renderBrowse();
+                updateMeta(null);
+                return;
+            }
+            if (!slug) {
+                const q = getRandomQuestion();
+                history.replaceState(null, '', '#' + q.slug);
+                showQuestion(q);
+                return;
+            }
+            const q = bySlug.get(slug);
+            if (q) {
+                showQuestion(q);
+            } else {
+                stopAutoPlay();
+                renderNotFound(slug);
+                updateMeta(null);
+            }
         }
 
-        // Display question
-        function displayQuestion() {
-            let question = getQuestionFromURL();
-            
-            if (!question) {
-                question = getRandomQuestion();
-                // Update URL without page reload
-                history.replaceState(null, null, `#${question.slug}`);
-            }
-
-            currentQuestion = question;
-            updateMetaTags(question);
-            renderQuestion(question);
+        function showQuestion(q) {
+            const changed = currentQuestion !== q;
+            currentQuestion = q;
+            updateMeta(q);
+            renderQuestion(q, changed);
             updateAutoPlayButton();
+            if (changed && !isAutoPlaying) window.scrollTo({ top: 0 });
         }
 
-        // Render question HTML
-        function renderQuestion(q) {
-            const app = document.getElementById('app');
-            
-            const answerClass = q.shortAnswer.toLowerCase();
-            const confidenceClass = q.confidence;
+        function getRandomQuestion() {
+            if (questions.length === 1) return questions[0];
+            let q;
+            do { q = questions[Math.floor(Math.random() * questions.length)]; }
+            while (q === currentQuestion);
+            return q;
+        }
 
-            let sourcesHTML = '';
-            if (q.sources && q.sources.length > 0) {
-                sourcesHTML = `
-                    <div class="sources">
-                        <h3>Sources</h3>
-                        ${q.sources.map(source => `
-                            <div class="source-item">
-                                <a href="${source.url}" target="_blank" rel="noopener noreferrer">${source.title}</a>
-                                <div class="source-org">${source.organization} • ${source.type}</div>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
+        function goTo(slug) {
+            if (currentSlug() === slug) route();
+            else location.hash = slug;
+        }
+
+        function loadRandomQuestion() { goTo(getRandomQuestion().slug); }
+
+        function stepQuestion(delta) {
+            if (!questions.length) return;
+            const idx = currentQuestion ? questions.indexOf(currentQuestion) : -1;
+            const next = questions[(idx + delta + questions.length) % questions.length];
+            goTo(next.slug);
+        }
+
+        // ---------- rendering ----------
+        function relatedFor(q) {
+            const seen = new Set([q.slug]);
+            const out = [];
+            (q.relatedQuestions || []).forEach(slug => {
+                const r = bySlug.get(slug);
+                if (r && !seen.has(slug)) { seen.add(slug); out.push(r); }
+            });
+            if (out.length < 3) {
+                const tags = new Set(q.tags || []);
+                const candidates = questions
+                    .filter(o => !seen.has(o.slug))
+                    .map(o => ({ o, score: (o.tags || []).filter(t => tags.has(t)).length * 2 + (o.category === q.category ? 1 : 0) }))
+                    .filter(x => x.score > 0)
+                    .sort((a, b) => b.score - a.score);
+                for (const c of candidates) {
+                    if (out.length >= 3) break;
+                    seen.add(c.o.slug); out.push(c.o);
+                }
             }
+            return out;
+        }
 
-            let tagsHTML = '';
-            if (q.tags && q.tags.length > 0) {
-                tagsHTML = `
-                    <div class="tags">
-                        ${q.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                    </div>
-                `;
-            }
+        function renderQuestion(q, animate) {
+            const ac = answerClass(q);
+            const conf = ['high', 'medium', 'low'].includes(q.confidence) ? q.confidence : 'medium';
 
-            let relatedHTML = '';
-            if (q.relatedQuestions && q.relatedQuestions.length > 0) {
-                relatedHTML = `
-                    <div class="related-questions">
-                        <h3>Related Questions</h3>
-                        ${q.relatedQuestions.map(slug => {
-                            const relatedQ = questionsData.questions.find(item => item.slug === slug);
-                            if (relatedQ) {
-                                return `<a href="#${slug}" class="related-link">${relatedQ.question}</a>`;
-                            }
-                            return '';
-                        }).join('')}
-                    </div>
-                `;
-            }
+            const sourcesHTML = (q.sources && q.sources.length) ? `
+                <section class="sources">
+                    <h3>Sources</h3>
+                    ${q.sources.map(s => `
+                        <div class="source-item">
+                            <a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>
+                            <div class="source-org">${esc(s.organization)}${s.type ? ' (' + esc(s.type) + ')' : ''}</div>
+                        </div>`).join('')}
+                </section>` : '';
 
-            app.innerHTML = `
-                <div class="card">
-                    <h1 class="question">${q.question}</h1>
-                    <div class="answer-badge ${answerClass}">${q.shortAnswer}</div>
-                    
-                    <div class="answer">${q.answer}</div>
-                    
-                    <div class="description">${q.description}</div>
-                    
-                    <div class="reasoning">
+            const tagsHTML = (q.tags && q.tags.length) ? `
+                <div class="tags" aria-label="Topics">
+                    ${q.tags.map(t => `<button type="button" class="tag" data-tag="${esc(t)}" title="See all questions tagged ${esc(t)}">${esc(t)}</button>`).join('')}
+                </div>` : '';
+
+            const related = relatedFor(q);
+            const relatedHTML = related.length ? `
+                <section class="related-questions">
+                    <h3>Related questions</h3>
+                    ${related.map(r => `
+                        <a href="#${encodeURIComponent(r.slug)}" class="related-link">
+                            <span class="mini-badge ${answerClass(r)}">${esc(r.shortAnswer)}</span>
+                            <span>${esc(r.question)}</span>
+                        </a>`).join('')}
+                </section>` : '';
+
+            const exceptionsHTML = q.exceptions ? `
+                <div class="panel exc">
+                    <h3>When it's different</h3>
+                    <p>${esc(q.exceptions)}</p>
+                </div>` : '';
+
+            const position = questions.indexOf(q) + 1;
+
+            $app.innerHTML = `
+                <article class="card${animate ? ' enter' : ''}">
+                    <span class="category-label"><a href="#browse" data-category="${esc(q.category)}">${esc(categoryLabel(q.category))}</a> &middot; ${position} of ${questions.length}</span>
+                    <h1 class="question">${esc(q.question)}</h1>
+                    <div class="answer-badge ${ac}">${esc(q.shortAnswer)}</div>
+
+                    <div class="answer">${esc(q.answer)}</div>
+                    <div class="description">${esc(q.description)}</div>
+
+                    <div class="panel why">
                         <h3>Why?</h3>
-                        <p>${q.reasoning}</p>
+                        <p>${esc(q.reasoning)}</p>
                     </div>
-                    
-                    <div class="scientific-basis">
-                        <h3>Scientific Basis</h3>
-                        <p>${q.scientificBasis}</p>
+
+                    <div class="panel sci">
+                        <h3>Scientific basis</h3>
+                        <p>${esc(q.scientificBasis)}</p>
                     </div>
-                    
-                    <div class="confidence ${confidenceClass}">
-                        Confidence: ${q.confidence}
+
+                    ${exceptionsHTML}
+
+                    <div class="meta-row">
+                        <span class="confidence ${conf}" title="How strong and consistent the evidence is">Confidence: ${esc(conf)}</span>
+                        ${q.lastReviewed ? `<span class="reviewed">Reviewed ${esc(formatDate(q.lastReviewed))}</span>` : ''}
                     </div>
-                    
+
                     ${tagsHTML}
                     ${sourcesHTML}
-                    
+
                     <div class="actions">
-                        <button class="btn btn-primary" onclick="loadRandomQuestion()">
-                            🎲 Random Question
-                        </button>
-                        <button class="btn btn-outline btn-auto-play" onclick="toggleAutoPlay()">
-                            ▶️ Auto-Play
-                        </button>
-                        <button class="btn btn-secondary" onclick="shareQuestion()">
-                            📤 Share This
-                        </button>
-                        <button class="btn btn-outline" onclick="copyLink()">
-                            🔗 Copy Link
-                        </button>
+                        <button class="btn btn-primary" type="button" data-action="random">🎲 Random question</button>
+                        <button class="btn btn-outline btn-auto-play" type="button" data-action="autoplay" aria-pressed="false">▶️ Auto-play</button>
+                        <button class="btn btn-secondary" type="button" data-action="share">📤 Share</button>
+                        <button class="btn btn-outline" type="button" data-action="copy">🔗 Copy link</button>
                     </div>
-                    
+                    <div class="pager">
+                        <button class="btn btn-outline" type="button" data-action="prev">Previous</button>
+                        <button class="btn btn-outline" type="button" data-action="next">Next</button>
+                    </div>
+
                     ${relatedHTML}
-                </div>
-            `;
+                </article>`;
         }
 
-        // Update meta tags for sharing
-        function updateMetaTags(q) {
-            document.title = q.meta?.title || `${q.question} - Should I?`;
-            
-            const metaDescription = document.querySelector('meta[name="description"]');
-            if (metaDescription) {
-                metaDescription.content = q.meta?.description || q.answer;
-            }
-            
-            const ogTitle = document.querySelector('meta[property="og:title"]');
-            if (ogTitle) {
-                ogTitle.content = q.meta?.title || q.question;
-            }
-            
-            const ogDescription = document.querySelector('meta[property="og:description"]');
-            if (ogDescription) {
-                ogDescription.content = q.meta?.description || q.answer;
-            }
+        function renderBrowse() {
+            currentQuestion = null;
+            const cats = [...new Set(questions.map(q => q.category))];
+            const { category, tag } = browseFilter;
+            const filtered = questions.filter(q =>
+                (category === 'all' || q.category === category) &&
+                (!tag || (q.tags || []).includes(tag)));
+
+            const groups = new Map();
+            filtered.forEach(q => {
+                if (!groups.has(q.category)) groups.set(q.category, []);
+                groups.get(q.category).push(q);
+            });
+
+            const chip = (value, label) =>
+                `<button type="button" class="tag" data-category="${esc(value)}" aria-pressed="${category === value && !tag}">${esc(label)}</button>`;
+
+            $app.innerHTML = `
+                <section class="card enter">
+                    <div class="browse-head">
+                        <h1 class="question" style="margin:0;text-align:left;font-size:1.6em">${tag ? 'Tagged "' + esc(tag) + '"' : 'All questions'}</h1>
+                        <span class="browse-count">${filtered.length} of ${questions.length}</span>
+                    </div>
+                    <div class="chips" aria-label="Filter by category">
+                        ${chip('all', 'All')}
+                        ${cats.map(c => chip(c, categoryLabel(c))).join('')}
+                        ${tag ? `<button type="button" class="tag" aria-pressed="true" data-clear-tag="1">Clear tag: ${esc(tag)} &times;</button>` : ''}
+                    </div>
+                    ${filtered.length ? [...groups.entries()].map(([cat, list]) => `
+                        <div class="browse-group">
+                            <h3>${esc(categoryLabel(cat))}</h3>
+                            <ul class="browse-list">
+                                ${list.map(q => `
+                                    <li><a href="#${encodeURIComponent(q.slug)}">
+                                        <span class="mini-badge ${answerClass(q)}">${esc(q.shortAnswer)}</span>
+                                        <span>${esc(q.question)}</span>
+                                    </a></li>`).join('')}
+                            </ul>
+                        </div>`).join('') : '<p class="description">No questions match this filter. Choose "All" to see everything.</p>'}
+                </section>`;
+            window.scrollTo({ top: 0 });
         }
 
-        // Load random question
-        function loadRandomQuestion() {
-            const question = getRandomQuestion();
-            window.location.hash = question.slug;
+        function renderNotFound(slug) {
+            currentQuestion = null;
+            const matches = search(slug.replace(/-/g, ' ')).slice(0, 5);
+            $app.innerHTML = `
+                <section class="card enter">
+                    <h1 class="question">Question not found</h1>
+                    <p class="description">There's no question at "#${esc(slug)}". It may have been renamed.${matches.length ? ' These might be what you were looking for:' : ''}</p>
+                    ${matches.length ? matches.map(q => `
+                        <a href="#${encodeURIComponent(q.slug)}" class="related-link">
+                            <span class="mini-badge ${answerClass(q)}">${esc(q.shortAnswer)}</span><span>${esc(q.question)}</span>
+                        </a>`).join('') : ''}
+                    <div class="actions">
+                        <button class="btn btn-primary" type="button" data-action="random">🎲 Random question</button>
+                        <a class="btn btn-outline" href="#browse">Browse all questions</a>
+                    </div>
+                </section>`;
         }
 
-        // Toggle auto-play
-        function toggleAutoPlay() {
-            if (isAutoPlaying) {
-                stopAutoPlay();
+        // ---------- meta ----------
+        function setMeta(selector, value) {
+            const el = document.querySelector(selector);
+            if (el) el.setAttribute('content', value);
+        }
+        function updateMeta(q) {
+            const title = q ? (q.meta && q.meta.title) || `${q.question} - Should I?` : SITE_TITLE;
+            const desc = q ? (q.meta && q.meta.description) || q.answer : SITE_DESC;
+            document.title = title;
+            setMeta('meta[name="description"]', desc);
+            setMeta('meta[property="og:title"]', q ? q.question : SITE_TITLE);
+            setMeta('meta[property="og:description"]', desc);
+            setMeta('meta[property="og:url"]', location.href);
+        }
+
+        // ---------- search ----------
+        function norm(s) { return String(s || '').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, ''); }
+        function buildSearchIndex() {
+            searchIndex = questions.map(q => ({
+                q,
+                title: norm(q.question),
+                tags: norm((q.tags || []).join(' ') + ' ' + q.category),
+                body: norm([q.answer, q.description].join(' '))
+            }));
+        }
+        function search(text) {
+            const terms = norm(text).split(/\s+/).filter(t => t.length > 1);
+            if (!terms.length) return [];
+            return searchIndex.map(e => {
+                let score = 0;
+                for (const t of terms) {
+                    if (e.title.includes(t)) score += 5;
+                    else if (e.tags.includes(t)) score += 3;
+                    else if (e.body.includes(t)) score += 1;
+                    else return null;
+                }
+                return { q: e.q, score };
+            }).filter(Boolean).sort((a, b) => b.score - a.score).map(x => x.q);
+        }
+        function renderResults() {
+            const text = $search.value.trim();
+            if (!text) { closeResults(); return; }
+            const hits = search(text).slice(0, 8);
+            activeResult = hits.length ? 0 : -1;
+            $results.innerHTML = hits.length
+                ? hits.map((q, i) => `
+                    <li><a id="result-${i}" role="option" href="#${encodeURIComponent(q.slug)}" aria-selected="${i === 0}">
+                        <span class="mini-badge ${answerClass(q)}">${esc(q.shortAnswer)}</span><span>${esc(q.question)}</span>
+                    </a></li>`).join('')
+                : '<li class="search-empty">No matching questions. Try a different word, or browse all questions.</li>';
+            $results.hidden = false;
+            $search.setAttribute('aria-expanded', 'true');
+            updateActiveDescendant();
+        }
+        function updateActiveDescendant() {
+            const links = $results.querySelectorAll('a[role="option"]');
+            links.forEach((a, i) => a.setAttribute('aria-selected', String(i === activeResult)));
+            if (activeResult >= 0 && links[activeResult]) {
+                $search.setAttribute('aria-activedescendant', links[activeResult].id);
+                links[activeResult].scrollIntoView({ block: 'nearest' });
             } else {
-                startAutoPlay();
+                $search.removeAttribute('aria-activedescendant');
             }
         }
+        function closeResults() {
+            $results.hidden = true;
+            $results.innerHTML = '';
+            $search.setAttribute('aria-expanded', 'false');
+            $search.removeAttribute('aria-activedescendant');
+            activeResult = -1;
+        }
 
-        // Start auto-play
+        $search.addEventListener('input', renderResults);
+        $search.addEventListener('focus', () => { if ($search.value.trim()) renderResults(); });
+        $search.addEventListener('keydown', e => {
+            const links = $results.querySelectorAll('a[role="option"]');
+            if (e.key === 'ArrowDown' && links.length) {
+                e.preventDefault(); activeResult = (activeResult + 1) % links.length; updateActiveDescendant();
+            } else if (e.key === 'ArrowUp' && links.length) {
+                e.preventDefault(); activeResult = (activeResult - 1 + links.length) % links.length; updateActiveDescendant();
+            } else if (e.key === 'Enter') {
+                if (links[activeResult]) {
+                    e.preventDefault();
+                    stopAutoPlay();
+                    goTo(decodeURIComponent(links[activeResult].getAttribute('href').slice(1)));
+                    $search.value = ''; closeResults(); $search.blur();
+                }
+            } else if (e.key === 'Escape') {
+                $search.value = ''; closeResults(); $search.blur();
+            }
+        });
+        $results.addEventListener('click', e => {
+            if (e.target.closest('a')) { stopAutoPlay(); $search.value = ''; closeResults(); }
+        });
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.search-wrap')) closeResults();
+        });
+
+        // ---------- auto-play ----------
         function startAutoPlay() {
             isAutoPlaying = true;
             updateAutoPlayButton();
-            
-            autoPlayInterval = setInterval(() => {
-                loadRandomQuestion();
-            }, 5000);
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = setInterval(() => {
+                if (!document.hidden) loadRandomQuestion();
+            }, AUTO_PLAY_MS);
         }
-
-        // Stop auto-play
         function stopAutoPlay() {
+            if (!isAutoPlaying && !autoPlayTimer) return;
             isAutoPlaying = false;
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = null;
             updateAutoPlayButton();
-            
-            if (autoPlayInterval) {
-                clearInterval(autoPlayInterval);
-                autoPlayInterval = null;
-            }
         }
-
-        // Update auto-play button appearance
+        function toggleAutoPlay() { isAutoPlaying ? stopAutoPlay() : startAutoPlay(); }
         function updateAutoPlayButton() {
-            const autoPlayBtn = document.querySelector('.btn-auto-play');
-            if (autoPlayBtn) {
-                if (isAutoPlaying) {
-                    autoPlayBtn.textContent = '⏸️ Stop Auto-Play';
-                    autoPlayBtn.classList.remove('btn-outline');
-                    autoPlayBtn.classList.add('btn-primary');
-                } else {
-                    autoPlayBtn.textContent = '▶️ Auto-Play';
-                    autoPlayBtn.classList.remove('btn-primary');
-                    autoPlayBtn.classList.add('btn-outline');
-                }
-            }
+            const btn = document.querySelector('.btn-auto-play');
+            if (!btn) return;
+            btn.textContent = isAutoPlaying ? '⏸️ Stop auto-play' : '▶️ Auto-play';
+            btn.setAttribute('aria-pressed', String(isAutoPlaying));
+            btn.classList.toggle('btn-primary', isAutoPlaying);
+            btn.classList.toggle('btn-outline', !isAutoPlaying);
         }
 
-        // Share question
+        // ---------- share / copy ----------
         async function shareQuestion() {
-            const url = window.location.href;
-            const text = `${currentQuestion.question}\n\n${currentQuestion.answer}`;
-            
+            if (!currentQuestion) return;
+            const url = location.href;
             if (navigator.share) {
                 try {
-                    await navigator.share({
-                        title: currentQuestion.question,
-                        text: text,
-                        url: url
-                    });
+                    await navigator.share({ title: currentQuestion.question, text: currentQuestion.answer, url });
+                    return;
                 } catch (err) {
-                    if (err.name !== 'AbortError') {
-                        copyLink();
-                    }
+                    if (err && err.name === 'AbortError') return;
                 }
+            }
+            copyLink();
+        }
+        function fallbackCopy(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text; ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed'; ta.style.opacity = '0';
+            document.body.appendChild(ta); ta.select();
+            let ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+            document.body.removeChild(ta);
+            return ok;
+        }
+        function copyLink() {
+            const url = location.href;
+            const done = ok => showToast(ok ? 'Link copied' : 'Couldn\'t copy. Copy the address from your browser bar.');
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(url).then(() => done(true), () => done(fallbackCopy(url)));
             } else {
-                copyLink();
+                done(fallbackCopy(url));
             }
         }
-
-        // Copy link to clipboard
-        function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                showToast('Link copied to clipboard!');
-            }).catch(() => {
-                showToast('Could not copy link');
-            });
-        }
-
-        // Show toast notification
+        let toastTimer = null;
         function showToast(message) {
             const toast = document.getElementById('toast');
             toast.textContent = message;
             toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
-        // Listen for hash changes
-        window.addEventListener('hashchange', displayQuestion);
+        // ---------- events ----------
+        $app.addEventListener('click', e => {
+            const actionEl = e.target.closest('[data-action]');
+            if (actionEl) {
+                const a = actionEl.dataset.action;
+                if (a !== 'autoplay' && a !== 'share' && a !== 'copy') stopAutoPlay();
+                if (a === 'random') loadRandomQuestion();
+                else if (a === 'autoplay') toggleAutoPlay();
+                else if (a === 'share') shareQuestion();
+                else if (a === 'copy') copyLink();
+                else if (a === 'prev') stepQuestion(-1);
+                else if (a === 'next') stepQuestion(1);
+                return;
+            }
+            const tagEl = e.target.closest('[data-tag]');
+            if (tagEl) {
+                stopAutoPlay();
+                browseFilter = { category: 'all', tag: tagEl.dataset.tag };
+                goTo('browse');
+                return;
+            }
+            const clearEl = e.target.closest('[data-clear-tag]');
+            if (clearEl) { browseFilter.tag = null; renderBrowse(); return; }
+            const catEl = e.target.closest('[data-category]');
+            if (catEl) {
+                e.preventDefault();
+                stopAutoPlay();
+                browseFilter = { category: catEl.dataset.category, tag: null };
+                if (currentSlug() === 'browse') renderBrowse(); else goTo('browse');
+                return;
+            }
+            if (e.target.closest('a[href^="#"]')) stopAutoPlay();
+        });
 
-        // Initialize on page load
+        document.getElementById('home-link').addEventListener('click', e => {
+            e.preventDefault(); stopAutoPlay(); loadRandomQuestion();
+        });
+        document.getElementById('random-btn').addEventListener('click', () => { stopAutoPlay(); loadRandomQuestion(); });
+        document.querySelector('a.header-btn[href="#browse"]').addEventListener('click', () => {
+            stopAutoPlay(); browseFilter = { category: 'all', tag: null };
+            if (currentSlug() === 'browse') renderBrowse();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (!questions.length || e.ctrlKey || e.metaKey || e.altKey) return;
+            const t = e.target;
+            if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+            if (e.key === '/') { e.preventDefault(); $search.focus(); }
+            else if (e.key === 'r' || e.key === 'R') { stopAutoPlay(); loadRandomQuestion(); }
+            else if (e.key === 'b' || e.key === 'B') { stopAutoPlay(); browseFilter = { category: 'all', tag: null }; goTo('browse'); }
+            else if (e.key === 'ArrowRight' && currentQuestion) { stopAutoPlay(); stepQuestion(1); }
+            else if (e.key === 'ArrowLeft' && currentQuestion) { stopAutoPlay(); stepQuestion(-1); }
+        });
+
+        window.addEventListener('hashchange', () => { if (questions.length) route(); });
+
         init();
+    })();
     </script>
 </body>
 </html>

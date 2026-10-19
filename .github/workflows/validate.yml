@@ -1,0 +1,35 @@
+name: Validate data
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 6 1 * *'   # monthly link check
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate questions.json
+        run: node scripts/validate.mjs
+
+  links:
+    # Reports broken source links. Many government sites block automated
+    # requests, so this job never fails the build; read its log for results.
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract source URLs
+        run: node -e "const d=require('./questions.json');console.log([...new Set(d.questions.flatMap(q=>q.sources.map(s=>s.url)))].join('\n'))" > urls.txt
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 2 --timeout 30 --accept 200..=299,403,429 urls.txt
+          fail: false

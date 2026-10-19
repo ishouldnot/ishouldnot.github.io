@@ -1,4 +1,98 @@
+# Should I?
+
+Clear, science-based answers to everyday questions, each with a short verdict, an explanation, the evidence behind it, exceptions, and sources.
+
+Live site: https://ishouldnot.github.io/
+
+## How it works
+
+This is a static site with no build step. GitHub Pages serves it straight from the root of the `main` branch.
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | The whole app: markup, styles, and script. Loads `questions.json` at runtime. |
+| `questions.json` | All questions and answers. Edit this to add or change content. |
+| `404.html` | Redirects paths like `/wear-seatbelt` to `/#wear-seatbelt`, so either link form works. |
+| `.nojekyll` | Tells GitHub Pages to serve files as-is without Jekyll processing. |
+| `scripts/validate.mjs` | Checks `questions.json` for schema errors and broken related-question links. |
+| `.github/workflows/validate.yml` | Runs the validator on every push and pull request, plus a monthly source-link report. |
+
+### URLs
+
+- `/#<slug>` shows a question, for example `/#wear-sunscreen-daily`
+- `/#browse` lists every question, filterable by category or tag
+- `/` shows a random question
+
+### Keyboard shortcuts
+
+`/` search, `R` random question, `B` browse, `Left` / `Right` previous and next question.
+
+## Running locally
+
+The page loads `questions.json` with `fetch`, which browsers block for `file://` pages, so serve the folder over HTTP:
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+Validate the data before committing (requires Node 18+):
+
+```bash
+node scripts/validate.mjs
+```
+
+## Adding a question
+
+Add an object to the `questions` array in `questions.json`:
+
+```json
+{
+  "id": "example-slug",
+  "slug": "example-slug",
+  "question": "Should I ...?",
+  "shortAnswer": "Yes",
+  "answer": "One or two sentences that directly answer the question.",
+  "description": "A short paragraph of context.",
+  "reasoning": "Why this is the answer: the mechanism.",
+  "scientificBasis": "What the evidence and expert bodies say.",
+  "exceptions": "Optional. Who this doesn't apply to, or when to see a professional.",
+  "confidence": "high",
+  "category": "health",
+  "tags": ["tag-one", "tag-two"],
+  "sources": [
+    { "title": "Page title", "url": "https://...", "type": "guideline", "organization": "Publisher" }
+  ],
+  "relatedQuestions": ["another-existing-slug"],
+  "lastReviewed": "YYYY-MM-DD",
+  "meta": { "title": "Should I ...? - Should I?", "description": "Used for the page title and description.", "keywords": "..." }
+}
+```
+
+Rules the validator enforces:
+
+- `slug` is lowercase kebab-case, unique, matches `id`, and isn't `browse`
+- `shortAnswer` is `Yes`, `No`, or `Depends`
+- `confidence` is `high`, `medium`, or `low` (how strong and consistent the evidence is)
+- `category` is one of `health`, `food`, `first-aid`, `safety`, `technology`, `environment`
+- at least one source, every source URL uses `https://`
+- every slug in `relatedQuestions` exists
+
+Prefer primary sources: government agencies, professional medical or scientific bodies, and peer-reviewed studies (DOI links are the most durable). If fewer than three related questions are listed, the page fills in suggestions automatically from shared tags and category.
+
+## Content principles
+
+- Answer the question as asked, then add nuance. Use `Depends` when the honest answer varies by person.
+- State exceptions, especially for health topics, and point people to a professional when individual circumstances matter.
+- Lower the confidence rating when evidence is mixed or mostly observational.
+- Update `lastReviewed` whenever a question's content is checked or changed.
+
+## Disclaimer
+
+Content is general information, not medical, legal, or professional advice.
+
 ## License
+
 This project is open source and available under the AGPL license.
 
 ---

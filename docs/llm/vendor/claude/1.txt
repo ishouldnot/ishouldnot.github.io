@@ -23,3 +23,200 @@ if there are a lot of files that need to change
 
 Claude Opus 5.5 Medium
 
+
+/
+I have attached three files in the project files 
+these are the only three files currently at 
+https://github.com/ishouldnot/ishouldnot.github.io
+the repository is public and  site is live at https://ishouldnot.github.io/
+it uses a very simple github pages strategy of deploy from main branch
+from the root of the folder
+please read all three files 
+fix any and all defects 
+improve whatever is possible 
+add any other facts possible 
+make it as complete and comprehensive as possible
+
+Use your best judgment
+If only a few files (under five or there about) need to change, give me the full path of the files that need to change and the FULL file 
+if there are a lot of files that need to change 
+    Delivery
+    Whole project as one tar.gz, unambiguous file placement
+    only include files that have changed in this tar gz
+    Any files to delete on updates called out explicitly
+
+Read a file, searched the web
+Fixing defects and improving a set of code files.
+
+Cross-checking health claims against current guidelines.
+
+Verifying specific studies behind each health and ergonomics claim.
+
+Fixing broken or outdated source links for each claim.
+
+Rechecking statistics behind safety and health claims.
+
+Correcting organization names and reviewing supplement guideline sources.
+
+Updating dental, environmental, and network safety claims with current evidence.
+
+Auditing alcohol guidance and scanning the code for accessibility issues.
+
+Expanding related question links to avoid broken references.
+
+Deciding how to package and deliver the updated files.
+
+Drafting new question entries with sourced safety guidance.
+
+Drafting more sourced questions on safety and habits.
+
+Sourcing guidance on fasting, charging, and medication safety.
+
+Debunking common food safety and everyday health myths.
+
+Covering emergency safety myths with sourced first-aid guidance.
+
+Drafting more myth-busting questions on everyday habits.
+
+Planning a build script to merge edits and new entries.
+
+Gathering reliable sources for each new safety claim.
+
+Verifying cancer screening and security best-practice sources.
+
+Verifying food safety guidance on washing, thawing, and leftovers.
+
+Selecting sources for everyday safety and health myths.
+
+Sourcing guidance on fire, poisoning, and first-aid emergencies.
+
+Straightening organization-specific links across remaining health and safety claims.
+
+Verifying sleep, standards, and plastic-safety sources.
+
+Verifying double-dipping, cracking, and vitamin sources.
+
+Planning the redesigned page’s layout, features, and interactions.
+
+Read frontend design skill before writing UI code
+SKILL.md
+
+nist sp 800 63b rev4
+www.enzoic.com
+
+By NHI Mgmt Group Editorial TeamDomain: Governance & RiskSource: EnzoicPublished September 25, 2025
+nhimg.org
+
+NIST-SP800-63B-4: Deciphering the New Password Security Standard
+www.sakimura.org
+
+www.enzoic.com
+www.enzoic.com
+
+2024 nist password guidelines
+www.descope.com
+
+NIST SP800-63B-4 2pd password standards have been followed since 2017 - the new requirement is phishing resistance
+www.sakimura.org
+
+NIST Proposes Barring Some of the Most Nonsensical Password Rules (arstechnica.com) 180
+yro.slashdot.org
+
+Global Privacy Control Signal Detected
+optro.ai
+
+Pillar 1: Password Firewall
+credentialgovernance.avatier.com
+Researching current password security guidance for a draft.
+
+Patching health-habit entries with updated evidence and sources.
+
+Updating vitamin, flu shot, and sleep guidance with sourced revisions.
+
+Revising wifi, breakfast, stretching, and screening guidance entries.
+
+Reworking vitamin D, standing desk, and other entries.
+
+Correcting more myth entries with sourced references and citations.
+
+Drafting quick-answer entries across safety, tech, and food topics.
+
+Organizing first-aid myths and home-safety entries by category.
+
+Verifying statistics on smoking, vaping, and cybersecurity guidance.
+
+Checking appliance, charging, and phone-liquid damage guidance for accuracy.
+
+Verifying alcohol, caffeine, and expired-medication health claims.
+
+Fact-checking colds, food safety, eye care, and burn-treatment entries.
+
+Verifying nosebleed, jellyfish, snake bite, and smoke alarm facts.
+
+Verifying carbon monoxide, sunscreen, and warm-up injury statistics.
+
+Planning routing, search, and layout for the question site.
+
+Big job — I’ll patch the data programmatically (so the existing entries get targeted fixes rather than retyping), add a lot of new questions, then rewrite the page.
+
+Ran 11 commands, created 4 files, and 3 more tools
+Eight files changed or were added, so it’s delivered as ishouldnot-update.tar.gz. Extract it at the repo root (tar -xzf ishouldnot-update.tar.gz from inside the clone) and commit. Every path in the archive is relative to the root.
+
+Files to delete: none.
+
+Contents:
+
+Modified: index.html, questions.json, README.md
+New: 404.html, .nojekyll, LICENSE, scripts/validate.mjs, .github/workflows/validate.yml
+Your repo also has a docs/llm/vendor/claude/1.txt file, which is a saved copy of this prompt. I left it alone, but note that GitHub Pages serves it publicly.
+
+Defects fixed in the page
+
+64 of the “related question” links pointed to questions that didn’t exist, so most related sections were empty or missing. All now resolve.
+Random and Auto-play could pick the question already on screen. Because the URL didn’t change, the page looked stuck. That can no longer happen.
+All content was inserted as raw HTML. It’s now escaped, and source links only allow http and https.
+og:image pointed to an image that doesn’t exist, and there was no favicon, which caused 404s on every page load. Both are fixed.
+An unknown #slug used to silently show a random question. It now shows a “not found” page with suggested matches.
+Smaller fixes: the page had two h1 headings, the clickable header didn’t work from the keyboard, and copying a link had no fallback. Questions also referenced image files that don’t exist.
+Data corrections (the existing 35 questions were fact-checked)
+
+Vitamin D changed from Yes to Depends. The 2024 Endocrine Society guideline and the VITAL trial don’t support routine supplements for healthy adults under 75.
+Annual checkup and standing desk changed to Depends, with lower confidence.
+Sleep cited the “Sleep Foundation” website but labeled it the National Sleep Foundation, which is a different organization. It now uses the AASM consensus statement and the CDC.
+Double-dipping had the study backwards. Salsa is the thin dip, and it picked up the most bacteria.
+Knuckle cracking described the wrong mechanism. A 2015 MRI study showed the sound comes from a bubble forming, not collapsing.
+Flu misstated the 40–60% figure, which is reduction in illness, not hospitalization.
+Public WiFi was outdated now that most traffic uses HTTPS.
+NIST passwords now cites the 2025 final Revision 4.
+Alcohol now includes the 2025 Surgeon General advisory.
+About a dozen source URLs were broken by CDC, ADA, and Harvard site reorganizations, or pointed to the wrong page (for example, the medication storage source was actually the FDA disposal page).
+New
+
+56 new questions, for 91 in total, in six categories: health, food, first aid, safety, technology, and environment. Examples include car seats, smoke and CO alarms, washing raw chicken, burns, nosebleeds, MFA, ransomware, and composting.
+A “Depends” verdict, plus an optional “When it’s different” section for exceptions.
+Search, a Browse-all view with category and tag filters, and Previous/Next buttons.
+Keyboard shortcuts, dark mode, reduced-motion support, and a medical disclaimer.
+404.html, so /wear-seatbelt redirects to /#wear-seatbelt.
+A CI validator that fails the build on schema errors or broken related links.
+The AGPL LICENSE file. Your README claimed AGPL, but the repo didn’t include the license text.
+Two things to know
+
+I couldn’t load every source URL from here. Most are agency pages or DOIs I’m confident in. The workflow runs a non-blocking monthly link check, so check its log after the first push.
+Social previews will still show the generic site title. Crawlers don’t run JavaScript or see #hash URLs, so per-question previews would need a static page for each question. That’s doable with a small generator script if you want it later.
+
+Ishouldnot update.tar
+GZ 
+
+
+
+Claude is AI and can make mistakes. Please double-check cited sources.
+
+
+
+
+
+
+Claude finished the response
+
+46
+08

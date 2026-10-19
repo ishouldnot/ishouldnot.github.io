@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting - Should I?</title>
+    <meta name="robots" content="noindex">
+    <script>
+        // GitHub Pages serves this file for unknown paths. Turn /some-slug into /#some-slug
+        // so links like https://ishouldnot.github.io/wear-seatbelt still work.
+        (function () {
+            var slug = location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html?$/i, '').split('/').pop() || '';
+            var target = '/' + (slug ? '#' + encodeURIComponent(decodeURIComponent(slug)) : '');
+            location.replace(target);
+        })();
+    </script>
+</head>
+<body>
+    <p>Page not found. <a href="/">Go to Should I?</a></p>
+</body>
+</html>
