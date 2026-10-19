@@ -1,0 +1,25 @@
+28
+06
+
+I have attached three files in the project files 
+these are the only three files currently at 
+https://github.com/ishouldnot/ishouldnot.github.io
+the repository is public and  site is live at https://ishouldnot.github.io/
+it uses a very simple github pages strategy of deploy from main branch
+from the root of the folder
+please read all three files 
+fix any and all defects 
+improve whatever is possible 
+add any other facts possible 
+make it as complete and comprehensive as possible
+
+Use your best judgment
+If only a few files (under five or there about) need to change, give me the full path of the files that need to change and the FULL file 
+if there are a lot of files that need to change 
+    Delivery
+    Whole project as one tar.gz, unambiguous file placement
+    only include files that have changed in this tar gz
+    Any files to delete on updates called out explicitly
+
+Claude Opus 5.5 Medium
+
